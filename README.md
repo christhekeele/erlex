@@ -1,5 +1,11 @@
 # Erlex
 
+> [!IMPORTANT]
+>
+> [This fork](https://github.com/christhekeele/erlex) of `erlex` is the official version currently being released on [hex.pm](https://hex.pm/packages/erlex).
+>
+> Please direct [issues and pull requests](CONTRIBUTING.MD) to it, rather than [the original repository](https://github.com/asummers/erlex).
+
 Convert Erlang style structs and error messages to equivalent Elixir.
 
 Useful for pretty printing things like Dialyzer errors and Observer
