@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased]
 
+## 0.2.7 - 2024-06-20
+
 ### Added
 
 - Support for Elixir 1.16: removes new compiler warnings.
@@ -107,7 +109,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 - Changelog, CI, docs
 - Initial functionality and tests
 
-[Unreleased]: https://github.com/christhekeele/erlex/compare/v0.2.1...HEAD
+[Unreleased]: https://github.com/christhekeele/erlex/compare/v0.2.7...HEAD
 [0.2.0...0.2.1]: https://github.com/christhekeele/erlex/compare/v0.2.0...v0.2.1
 [0.1.6...0.2.0]: https://github.com/christhekeele/erlex/compare/v0.1.6...v0.2.0
 [0.1.5...0.1.6]: https://github.com/christhekeele/erlex/compare/v0.1.5...v0.1.6
