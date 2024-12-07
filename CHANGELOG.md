@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased]
 
-## 0.2.7 - 2024-06-20
+## [0.2.7][0.2.6...0.2.7] - 2024-06-20
 
 ### Added
 
@@ -20,43 +20,43 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 - Lone `_` variables in patterns
 
-## 0.2.6 - 2020-03-09
+## [0.2.6][0.2.5...0.2.6] - 2020-03-09
 
 ### Added
 
 - Replace << parsing to fix nested pattern matching binary bugs discovered from Phoenix 1.4.15.
 
-## 0.2.5 - 2019-09-19
+## [0.2.5][0.2.4...0.2.5] - 2019-09-19
 
 ### Added
 
 - Handle Erlang variables better with casing in guards.
 
-## 0.2.4 - 2019-07-18
+## [0.2.4][0.2.3...0.2.4] - 2019-07-18
 
 ### Added
 
 - Handle names in whens more properly.
 
-## 0.2.3 - 2019-07-16
+## [0.2.3][0.2.2...0.2.3] - 2019-07-16
 
 ### Added
 
 - Handle single letter atoms in constracts.
 
-## 0.2.2 - 2019-06-07
+## [0.2.2][0.2.1...0.2.2] - 2019-06-07
 
 ### Added
 
 - Handle pretty printing binary strings better.
 
-## 0.2.1 - 2019-02-11
+## [0.2.1][0.2.0...0.2.1] - 2019-02-11
 
 ### Added
 
 - Handle another struct pretty print.
 
-## 0.2.0 - 2019-02-01
+## [0.2.0][0.1.6...0.2.0] - 2019-02-01
 
 ### Added
 
@@ -65,38 +65,38 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 - Handle ... contracts.
 - Add another struct pretty print layer.
 
-## 0.1.6 - 2018-11-06
+## [0.1.6][0.1.5...0.1.6] - 2018-11-06
 
 ### Added
 
 - Add ability to pretty print exception struct as Exception.t().
 
-## 0.1.5 - 2018-09-17
+## [0.1.5][0.1.4...0.1.5] - 2018-09-17
 
 ### Added
 
 - Add ability to pretty print numbered named types
 
-## 0.1.4 - 2018-09-17
+## [0.1.4][0.1.3...0.1.4] - 2018-09-17
 
 ### Added
 
 - Add ability to parse whens in specs.
 
-## 0.1.3 - 2018-09-10
+## [0.1.3][0.1.2...0.1.3] - 2018-09-10
 
 ### Added
 
 - Add ability to parse empty tuples
 - Bump ex_doc
 
-## 0.1.2 - 2018-08-26
+## [0.1.2][0.1.1...0.1.2] - 2018-08-26
 
 ### Added
 
 - Add ability to deal with when clauses in contracts
 
-## 0.1.1 - 2018-08-21
+## [0.1.1][0.1.0...0.1.1] - 2018-08-21
 
 ### Added
 
@@ -110,7 +110,13 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 - Initial functionality and tests
 
 [Unreleased]: https://github.com/christhekeele/erlex/compare/v0.2.7...HEAD
-[0.2.0...0.2.1]: https://github.com/christhekeele/erlex/compare/v0.2.0...v0.2.1
+[0.2.6...0.2.7]: https://github.com/christhekeele/erlex/compare/v0.2.6...0.2.7
+[0.2.5...0.2.6]: https://github.com/christhekeele/erlex/compare/v0.2.5...0.2.6
+[0.2.4...0.2.5]: https://github.com/christhekeele/erlex/compare/v0.2.4...0.2.5
+[0.2.3...0.2.4]: https://github.com/christhekeele/erlex/compare/v0.2.3...0.2.4
+[0.2.2...0.2.3]: https://github.com/christhekeele/erlex/compare/v0.2.2...0.2.3
+[0.2.1...0.2.2]: https://github.com/christhekeele/erlex/compare/v0.2.1...0.2.2
+[0.2.0...0.2.1]: https://github.com/christhekeele/erlex/compare/v0.2.0...0.2.1
 [0.1.6...0.2.0]: https://github.com/christhekeele/erlex/compare/v0.1.6...v0.2.0
 [0.1.5...0.1.6]: https://github.com/christhekeele/erlex/compare/v0.1.5...v0.1.6
 [0.1.4...0.1.5]: https://github.com/christhekeele/erlex/compare/v0.1.4...v0.1.5
