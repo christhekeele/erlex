@@ -11,8 +11,8 @@ on:
     - cron: 0 0 * * *
 
 env:
-  edge-elixir: "master"
-  edge-otp: "x"
+  edge-elixir: master
+  edge-otp: latest
   MIX_ENV: test
 
 concurrency:
