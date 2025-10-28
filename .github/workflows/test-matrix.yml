@@ -232,7 +232,7 @@ jobs:
             type: required
 
           ##
-          # OTPs <24 below this point don't work on macOS images
+          # OTPs <25 below this aren't available on macOS images
           ##
 
           # ELIXIR 1.16 (OTP 26-24)
@@ -310,7 +310,7 @@ jobs:
             type: required
 
           ##
-          # Elixirs above this point don't work on ubuntu-20.04
+          # Elixirs above this aren't available on ubuntu-20.04
           ##
 
           # ELIXIR 1.15 (OTP 26-24)
@@ -403,6 +403,10 @@ jobs:
           # UNMAINTAINED ELIXIRS
           ##
 
+          ##
+          # OTPs <24 below this aren't available on ubuntu >20 images
+          ##
+
           # ELIXIR 1.14 (OTP 26-23)
           - elixir: "1.14.x"
             otp: "26.x"
@@ -490,10 +494,6 @@ jobs:
             type: required
           - elixir: "1.14.x"
             otp: "23.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.14.x"
-            otp: "23.x"
             os: "ubuntu-20.04"
             type: required
           # - elixir: "1.14.x"
@@ -560,10 +560,6 @@ jobs:
             type: required
           - elixir: "1.13.x"
             otp: "23.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.13.x"
-            otp: "23.x"
             os: "ubuntu-20.04"
             type: required
           # - elixir: "1.13.x"
@@ -573,10 +569,6 @@ jobs:
           - elixir: "1.13.x"
             otp: "23.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.13.x"
-            otp: "22.x"
-            os: "ubuntu-22.04"
             type: required
           - elixir: "1.13.x"
             otp: "22.x"
@@ -614,10 +606,6 @@ jobs:
             type: required
           - elixir: "1.12.x"
             otp: "23.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.12.x"
-            otp: "23.x"
             os: "ubuntu-20.04"
             type: required
           # - elixir: "1.12.x"
@@ -627,10 +615,6 @@ jobs:
           - elixir: "1.12.x"
             otp: "23.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.12.x"
-            otp: "22.x"
-            os: "ubuntu-22.04"
             type: required
           - elixir: "1.12.x"
             otp: "22.x"
@@ -657,10 +641,6 @@ jobs:
           # ELIXIR 1.11 (OTP 23-21)
           - elixir: "1.11.x"
             otp: "23.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.11.x"
-            otp: "23.x"
             os: "ubuntu-20.04"
             type: required
           # - elixir: "1.11.x"
@@ -673,10 +653,6 @@ jobs:
             type: required
           - elixir: "1.11.x"
             otp: "22.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.11.x"
-            otp: "22.x"
             os: "ubuntu-20.04"
             type: required
           # - elixir: "1.11.x"
@@ -686,10 +662,6 @@ jobs:
           - elixir: "1.11.x"
             otp: "22.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.11.x"
-            otp: "21.x"
-            os: "ubuntu-22.04"
             type: required
           - elixir: "1.11.x"
             otp: "21.x"
@@ -707,10 +679,6 @@ jobs:
           # ELIXIR 1.10 (OTP 23-21)
           - elixir: "1.10.x"
             otp: "23.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.10.x"
-            otp: "23.x"
             os: "ubuntu-20.04"
             type: required
           # - elixir: "1.10.x"
@@ -720,10 +688,6 @@ jobs:
           - elixir: "1.10.x"
             otp: "23.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.10.x"
-            otp: "22.x"
-            os: "ubuntu-22.04"
             type: required
           - elixir: "1.10.x"
             otp: "22.x"
@@ -739,10 +703,6 @@ jobs:
             type: required
           - elixir: "1.10.x"
             otp: "21.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.10.x"
-            otp: "21.x"
             os: "ubuntu-20.04"
             type: required
           # - elixir: "1.10.x"
@@ -755,29 +715,17 @@ jobs:
             type: required
 
           ##
-          # OTPs <21 below this point don't work on windows images
+          # OTPs <21 below this aren't available on windows images
           ##
 
           # ELIXIR 1.9 (OTP 22-20)
           - elixir: "1.9.x"
             otp: "22.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.9.x"
-            otp: "22.x"
             os: "ubuntu-20.04"
             type: required
           - elixir: "1.9.x"
             otp: "21.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.9.x"
-            otp: "21.x"
             os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.9.x"
-            otp: "20.x"
-            os: "ubuntu-22.04"
             type: required
           - elixir: "1.9.x"
             otp: "20.x"
@@ -787,23 +735,11 @@ jobs:
           # ELIXIR 1.8 (OTP 22-20)
           - elixir: "1.8.x"
             otp: "22.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.8.x"
-            otp: "22.x"
             os: "ubuntu-20.04"
             type: required
           - elixir: "1.8.x"
             otp: "21.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.8.x"
-            otp: "21.x"
             os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.8.x"
-            otp: "20.x"
-            os: "ubuntu-22.04"
             type: required
           - elixir: "1.8.x"
             otp: "20.x"
@@ -818,23 +754,11 @@ jobs:
           # ELIXIR 1.7 (OTP 22-19)
           - elixir: "1.7.x"
             otp: "22.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.7.x"
-            otp: "22.x"
             os: "ubuntu-20.04"
             type: required
           - elixir: "1.7.x"
             otp: "21.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.7.x"
-            otp: "21.x"
             os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.7.x"
-            otp: "20.x"
-            os: "ubuntu-22.04"
             type: required
           - elixir: "1.7.x"
             otp: "20.x"
@@ -844,15 +768,7 @@ jobs:
           # ELIXIR 1.6 (OTP 21-19)
           - elixir: "1.6.x"
             otp: "21.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.6.x"
-            otp: "21.x"
             os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.6.x"
-            otp: "20.x"
-            os: "ubuntu-22.04"
             type: required
           - elixir: "1.6.x"
             otp: "20.x"
@@ -1104,7 +1020,7 @@ jobs:
             type: required
 
           ##
-          # OTPs <24 below this point don't work on macOS images
+          # OTPs <25 below this aren't available on macOS images
           ##
 
           # ELIXIR 1.16 (OTP 26-24)
@@ -1182,7 +1098,7 @@ jobs:
             type: required
 
           ##
-          # Elixirs above this point don't work on ubuntu-20.04
+          # Elixirs above this aren't available on ubuntu-20.04
           ##
 
           # ELIXIR 1.15 (OTP 26-24)
@@ -1275,6 +1191,10 @@ jobs:
           # UNMAINTAINED ELIXIRS
           ##
 
+          ##
+          # OTPs <24 below this aren't available on ubuntu >20 images
+          ##
+
           # ELIXIR 1.14 (OTP 26-23)
           - elixir: "1.14.x"
             otp: "26.x"
@@ -1362,10 +1282,6 @@ jobs:
             type: required
           - elixir: "1.14.x"
             otp: "23.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.14.x"
-            otp: "23.x"
             os: "ubuntu-20.04"
             type: required
           # - elixir: "1.14.x"
@@ -1432,10 +1348,6 @@ jobs:
             type: required
           - elixir: "1.13.x"
             otp: "23.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.13.x"
-            otp: "23.x"
             os: "ubuntu-20.04"
             type: required
           # - elixir: "1.13.x"
@@ -1445,10 +1357,6 @@ jobs:
           - elixir: "1.13.x"
             otp: "23.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.13.x"
-            otp: "22.x"
-            os: "ubuntu-22.04"
             type: required
           - elixir: "1.13.x"
             otp: "22.x"
@@ -1486,10 +1394,6 @@ jobs:
             type: required
           - elixir: "1.12.x"
             otp: "23.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.12.x"
-            otp: "23.x"
             os: "ubuntu-20.04"
             type: required
           # - elixir: "1.12.x"
@@ -1499,10 +1403,6 @@ jobs:
           - elixir: "1.12.x"
             otp: "23.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.12.x"
-            otp: "22.x"
-            os: "ubuntu-22.04"
             type: required
           - elixir: "1.12.x"
             otp: "22.x"
@@ -1529,10 +1429,6 @@ jobs:
           # ELIXIR 1.11 (OTP 23-21)
           - elixir: "1.11.x"
             otp: "23.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.11.x"
-            otp: "23.x"
             os: "ubuntu-20.04"
             type: required
           # - elixir: "1.11.x"
@@ -1545,10 +1441,6 @@ jobs:
             type: required
           - elixir: "1.11.x"
             otp: "22.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.11.x"
-            otp: "22.x"
             os: "ubuntu-20.04"
             type: required
           # - elixir: "1.11.x"
@@ -1558,10 +1450,6 @@ jobs:
           - elixir: "1.11.x"
             otp: "22.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.11.x"
-            otp: "21.x"
-            os: "ubuntu-22.04"
             type: required
           - elixir: "1.11.x"
             otp: "21.x"
@@ -1579,10 +1467,6 @@ jobs:
           # ELIXIR 1.10 (OTP 23-21)
           - elixir: "1.10.x"
             otp: "23.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.10.x"
-            otp: "23.x"
             os: "ubuntu-20.04"
             type: required
           # - elixir: "1.10.x"
@@ -1592,10 +1476,6 @@ jobs:
           - elixir: "1.10.x"
             otp: "23.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.10.x"
-            otp: "22.x"
-            os: "ubuntu-22.04"
             type: required
           - elixir: "1.10.x"
             otp: "22.x"
@@ -1611,10 +1491,6 @@ jobs:
             type: required
           - elixir: "1.10.x"
             otp: "21.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.10.x"
-            otp: "21.x"
             os: "ubuntu-20.04"
             type: required
           # - elixir: "1.10.x"
@@ -1627,29 +1503,17 @@ jobs:
             type: required
 
           ##
-          # OTPs <21 below this point don't work on windows images
+          # OTPs <21 below this aren't available on windows images
           ##
 
           # ELIXIR 1.9 (OTP 22-20)
           - elixir: "1.9.x"
             otp: "22.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.9.x"
-            otp: "22.x"
             os: "ubuntu-20.04"
             type: required
           - elixir: "1.9.x"
             otp: "21.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.9.x"
-            otp: "21.x"
             os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.9.x"
-            otp: "20.x"
-            os: "ubuntu-22.04"
             type: required
           - elixir: "1.9.x"
             otp: "20.x"
@@ -1659,23 +1523,11 @@ jobs:
           # ELIXIR 1.8 (OTP 22-20)
           - elixir: "1.8.x"
             otp: "22.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.8.x"
-            otp: "22.x"
             os: "ubuntu-20.04"
             type: required
           - elixir: "1.8.x"
             otp: "21.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.8.x"
-            otp: "21.x"
             os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.8.x"
-            otp: "20.x"
-            os: "ubuntu-22.04"
             type: required
           - elixir: "1.8.x"
             otp: "20.x"
@@ -1690,23 +1542,11 @@ jobs:
           # ELIXIR 1.7 (OTP 22-19)
           - elixir: "1.7.x"
             otp: "22.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.7.x"
-            otp: "22.x"
             os: "ubuntu-20.04"
             type: required
           - elixir: "1.7.x"
             otp: "21.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.7.x"
-            otp: "21.x"
             os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.7.x"
-            otp: "20.x"
-            os: "ubuntu-22.04"
             type: required
           - elixir: "1.7.x"
             otp: "20.x"
@@ -1716,15 +1556,7 @@ jobs:
           # ELIXIR 1.6 (OTP 21-19)
           - elixir: "1.6.x"
             otp: "21.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.6.x"
-            otp: "21.x"
             os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.6.x"
-            otp: "20.x"
-            os: "ubuntu-22.04"
             type: required
           - elixir: "1.6.x"
             otp: "20.x"
