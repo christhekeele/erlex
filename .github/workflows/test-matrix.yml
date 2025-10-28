@@ -7,7 +7,7 @@ on:
   workflow_dispatch: {}
 
   # Run on all pull requests to important branches.
-  pull_request:
+  pull_request_target:
     branches:
       - latest
       - release

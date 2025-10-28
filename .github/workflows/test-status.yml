@@ -12,7 +12,7 @@ on:
       - release
 
   # Update status on all pushes to important branches.
-  pull_request:
+  pull_request_target:
     branches:
       - latest
       - release
