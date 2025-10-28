@@ -62,7 +62,9 @@ defmodule Erlex do
 
   defp format(code) do
     try do
-      Code.format_string!(code)
+      code
+      |> Code.format_string!()
+      |> IO.iodata_to_binary()
     rescue
       _ ->
         throw({:error, :formatting, code})
@@ -151,7 +153,6 @@ defmodule Erlex do
     end
     """
     |> format()
-    |> Enum.join("")
     |> String.trim_leading(prefix)
     |> String.trim_trailing(suffix)
     |> String.replace("\n      ", "\n")
@@ -171,7 +172,6 @@ defmodule Erlex do
     end
     """
     |> format()
-    |> Enum.join("")
     |> String.trim_leading(prefix)
     |> String.trim_trailing(suffix)
     |> String.trim_trailing(indented_suffix)
@@ -191,7 +191,6 @@ defmodule Erlex do
     end
     """
     |> format()
-    |> Enum.join("")
     |> String.trim_leading(prefix)
     |> String.trim_trailing(suffix)
     |> String.replace("\n      ", "\n")
