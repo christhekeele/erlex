@@ -36,7 +36,7 @@ jobs:
         os:
           - "ubuntu-24.04"
           - "ubuntu-22.04"
-          - "windows-2025"
+          # - "windows-2025" # Note: broken until this PR is release: https://github.com/erlef/setup-beam/pull/388
           - "windows-2022"
           - "macOS-15"
           - "macOS-14"
@@ -68,10 +68,10 @@ jobs:
             otp: "27.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.18.x"
-            otp: "27.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.18.x"
+          #   otp: "27.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.18.x"
             otp: "27.x"
             os: "windows-2022"
@@ -96,10 +96,10 @@ jobs:
             otp: "26.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.18.x"
-            otp: "26.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.18.x"
+          #   otp: "26.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.18.x"
             otp: "26.x"
             os: "windows-2022"
@@ -124,10 +124,10 @@ jobs:
             otp: "25.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.18.x"
-            otp: "25.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.18.x"
+          #   otp: "25.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.18.x"
             otp: "25.x"
             os: "windows-2022"
@@ -154,10 +154,10 @@ jobs:
             otp: "27.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.17.x"
-            otp: "27.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.17.x"
+          #   otp: "27.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.17.x"
             otp: "27.x"
             os: "windows-2022"
@@ -182,10 +182,10 @@ jobs:
             otp: "26.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.17.x"
-            otp: "26.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.17.x"
+          #   otp: "26.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.17.x"
             otp: "26.x"
             os: "windows-2022"
@@ -210,10 +210,10 @@ jobs:
             otp: "25.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.17.x"
-            otp: "25.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.17.x"
+          #   otp: "25.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.17.x"
             otp: "25.x"
             os: "windows-2022"
@@ -244,10 +244,10 @@ jobs:
             otp: "26.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.16.x"
-            otp: "26.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.16.x"
+          #   otp: "26.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.16.x"
             otp: "26.x"
             os: "windows-2022"
@@ -272,10 +272,10 @@ jobs:
             otp: "25.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.16.x"
-            otp: "25.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.16.x"
+          #   otp: "25.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.16.x"
             otp: "25.x"
             os: "windows-2022"
@@ -300,10 +300,10 @@ jobs:
             otp: "24.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.16.x"
-            otp: "24.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.16.x"
+          #   otp: "24.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.16.x"
             otp: "24.x"
             os: "windows-2022"
@@ -326,10 +326,10 @@ jobs:
             otp: "26.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.15.x"
-            otp: "26.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.15.x"
+          #   otp: "26.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.15.x"
             otp: "26.x"
             os: "windows-2022"
@@ -358,10 +358,10 @@ jobs:
             otp: "25.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.15.x"
-            otp: "25.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.15.x"
+          #   otp: "25.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.15.x"
             otp: "25.x"
             os: "windows-2022"
@@ -390,10 +390,10 @@ jobs:
             otp: "24.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.15.x"
-            otp: "24.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.15.x"
+          #   otp: "24.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.15.x"
             otp: "24.x"
             os: "windows-2022"
@@ -416,10 +416,10 @@ jobs:
             otp: "26.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.14.x"
-            otp: "26.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.14.x"
+          #   otp: "26.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.14.x"
             otp: "26.x"
             os: "windows-2022"
@@ -448,10 +448,10 @@ jobs:
             otp: "25.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.14.x"
-            otp: "25.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.14.x"
+          #   otp: "25.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.14.x"
             otp: "25.x"
             os: "windows-2022"
@@ -480,10 +480,10 @@ jobs:
             otp: "24.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.14.x"
-            otp: "24.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.14.x"
+          #   otp: "24.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.14.x"
             otp: "24.x"
             os: "windows-2022"
@@ -496,10 +496,10 @@ jobs:
             otp: "23.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.14.x"
-            otp: "23.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.14.x"
+          #   otp: "23.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.14.x"
             otp: "23.x"
             os: "windows-2022"
@@ -518,10 +518,10 @@ jobs:
             otp: "25.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.13.x"
-            otp: "25.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.13.x"
+          #   otp: "25.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.13.x"
             otp: "25.x"
             os: "windows-2022"
@@ -550,10 +550,10 @@ jobs:
             otp: "24.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.13.x"
-            otp: "24.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.13.x"
+          #   otp: "24.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.13.x"
             otp: "24.x"
             os: "windows-2022"
@@ -566,10 +566,10 @@ jobs:
             otp: "23.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.13.x"
-            otp: "23.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.13.x"
+          #   otp: "23.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.13.x"
             otp: "23.x"
             os: "windows-2022"
@@ -582,10 +582,10 @@ jobs:
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.13.x"
-            otp: "22.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.13.x"
+          #   otp: "22.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.13.x"
             otp: "22.x"
             os: "windows-2022"
@@ -604,10 +604,10 @@ jobs:
             otp: "24.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.12.x"
-            otp: "24.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.12.x"
+          #   otp: "24.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.12.x"
             otp: "24.x"
             os: "windows-2022"
@@ -620,10 +620,10 @@ jobs:
             otp: "23.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.12.x"
-            otp: "23.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.12.x"
+          #   otp: "23.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.12.x"
             otp: "23.x"
             os: "windows-2022"
@@ -636,10 +636,10 @@ jobs:
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.12.x"
-            otp: "22.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.12.x"
+          #   otp: "22.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.12.x"
             otp: "22.x"
             os: "windows-2022"
@@ -663,10 +663,10 @@ jobs:
             otp: "23.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.11.x"
-            otp: "23.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.11.x"
+          #   otp: "23.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.11.x"
             otp: "23.x"
             os: "windows-2022"
@@ -679,10 +679,10 @@ jobs:
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.11.x"
-            otp: "22.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.11.x"
+          #   otp: "22.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.11.x"
             otp: "22.x"
             os: "windows-2022"
@@ -695,10 +695,10 @@ jobs:
             otp: "21.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.11.x"
-            otp: "21.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.11.x"
+          #   otp: "21.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.11.x"
             otp: "21.x"
             os: "windows-2022"
@@ -713,10 +713,10 @@ jobs:
             otp: "23.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.10.x"
-            otp: "23.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.10.x"
+          #   otp: "23.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.10.x"
             otp: "23.x"
             os: "windows-2022"
@@ -729,10 +729,10 @@ jobs:
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.10.x"
-            otp: "22.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.10.x"
+          #   otp: "22.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.10.x"
             otp: "22.x"
             os: "windows-2022"
@@ -745,10 +745,10 @@ jobs:
             otp: "21.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.10.x"
-            otp: "21.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.10.x"
+          #   otp: "21.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.10.x"
             otp: "21.x"
             os: "windows-2022"
@@ -908,7 +908,7 @@ jobs:
         os:
           - "ubuntu-24.04"
           - "ubuntu-22.04"
-          - "windows-2025"
+          # - "windows-2025" # Note: broken until this PR is release: https://github.com/erlef/setup-beam/pull/388
           - "windows-2022"
           - "macOS-15"
           - "macOS-14"
@@ -940,10 +940,10 @@ jobs:
             otp: "27.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.18.x"
-            otp: "27.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.18.x"
+          #   otp: "27.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.18.x"
             otp: "27.x"
             os: "windows-2022"
@@ -968,10 +968,10 @@ jobs:
             otp: "26.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.18.x"
-            otp: "26.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.18.x"
+          #   otp: "26.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.18.x"
             otp: "26.x"
             os: "windows-2022"
@@ -996,10 +996,10 @@ jobs:
             otp: "25.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.18.x"
-            otp: "25.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.18.x"
+          #   otp: "25.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.18.x"
             otp: "25.x"
             os: "windows-2022"
@@ -1026,10 +1026,10 @@ jobs:
             otp: "27.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.17.x"
-            otp: "27.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.17.x"
+          #   otp: "27.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.17.x"
             otp: "27.x"
             os: "windows-2022"
@@ -1054,10 +1054,10 @@ jobs:
             otp: "26.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.17.x"
-            otp: "26.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.17.x"
+          #   otp: "26.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.17.x"
             otp: "26.x"
             os: "windows-2022"
@@ -1082,10 +1082,10 @@ jobs:
             otp: "25.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.17.x"
-            otp: "25.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.17.x"
+          #   otp: "25.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.17.x"
             otp: "25.x"
             os: "windows-2022"
@@ -1116,10 +1116,10 @@ jobs:
             otp: "26.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.16.x"
-            otp: "26.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.16.x"
+          #   otp: "26.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.16.x"
             otp: "26.x"
             os: "windows-2022"
@@ -1144,10 +1144,10 @@ jobs:
             otp: "25.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.16.x"
-            otp: "25.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.16.x"
+          #   otp: "25.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.16.x"
             otp: "25.x"
             os: "windows-2022"
@@ -1172,10 +1172,10 @@ jobs:
             otp: "24.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.16.x"
-            otp: "24.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.16.x"
+          #   otp: "24.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.16.x"
             otp: "24.x"
             os: "windows-2022"
@@ -1198,10 +1198,10 @@ jobs:
             otp: "26.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.15.x"
-            otp: "26.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.15.x"
+          #   otp: "26.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.15.x"
             otp: "26.x"
             os: "windows-2022"
@@ -1230,10 +1230,10 @@ jobs:
             otp: "25.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.15.x"
-            otp: "25.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.15.x"
+          #   otp: "25.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.15.x"
             otp: "25.x"
             os: "windows-2022"
@@ -1262,10 +1262,10 @@ jobs:
             otp: "24.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.15.x"
-            otp: "24.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.15.x"
+          #   otp: "24.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.15.x"
             otp: "24.x"
             os: "windows-2022"
@@ -1288,10 +1288,10 @@ jobs:
             otp: "26.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.14.x"
-            otp: "26.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.14.x"
+          #   otp: "26.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.14.x"
             otp: "26.x"
             os: "windows-2022"
@@ -1320,10 +1320,10 @@ jobs:
             otp: "25.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.14.x"
-            otp: "25.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.14.x"
+          #   otp: "25.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.14.x"
             otp: "25.x"
             os: "windows-2022"
@@ -1352,10 +1352,10 @@ jobs:
             otp: "24.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.14.x"
-            otp: "24.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.14.x"
+          #   otp: "24.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.14.x"
             otp: "24.x"
             os: "windows-2022"
@@ -1368,10 +1368,10 @@ jobs:
             otp: "23.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.14.x"
-            otp: "23.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.14.x"
+          #   otp: "23.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.14.x"
             otp: "23.x"
             os: "windows-2022"
@@ -1390,10 +1390,10 @@ jobs:
             otp: "25.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.13.x"
-            otp: "25.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.13.x"
+          #   otp: "25.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.13.x"
             otp: "25.x"
             os: "windows-2022"
@@ -1422,10 +1422,10 @@ jobs:
             otp: "24.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.13.x"
-            otp: "24.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.13.x"
+          #   otp: "24.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.13.x"
             otp: "24.x"
             os: "windows-2022"
@@ -1438,10 +1438,10 @@ jobs:
             otp: "23.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.13.x"
-            otp: "23.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.13.x"
+          #   otp: "23.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.13.x"
             otp: "23.x"
             os: "windows-2022"
@@ -1454,10 +1454,10 @@ jobs:
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.13.x"
-            otp: "22.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.13.x"
+          #   otp: "22.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.13.x"
             otp: "22.x"
             os: "windows-2022"
@@ -1476,10 +1476,10 @@ jobs:
             otp: "24.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.12.x"
-            otp: "24.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.12.x"
+          #   otp: "24.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.12.x"
             otp: "24.x"
             os: "windows-2022"
@@ -1492,10 +1492,10 @@ jobs:
             otp: "23.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.12.x"
-            otp: "23.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.12.x"
+          #   otp: "23.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.12.x"
             otp: "23.x"
             os: "windows-2022"
@@ -1508,10 +1508,10 @@ jobs:
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.12.x"
-            otp: "22.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.12.x"
+          #   otp: "22.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.12.x"
             otp: "22.x"
             os: "windows-2022"
@@ -1535,10 +1535,10 @@ jobs:
             otp: "23.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.11.x"
-            otp: "23.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.11.x"
+          #   otp: "23.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.11.x"
             otp: "23.x"
             os: "windows-2022"
@@ -1551,10 +1551,10 @@ jobs:
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.11.x"
-            otp: "22.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.11.x"
+          #   otp: "22.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.11.x"
             otp: "22.x"
             os: "windows-2022"
@@ -1567,10 +1567,10 @@ jobs:
             otp: "21.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.11.x"
-            otp: "21.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.11.x"
+          #   otp: "21.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.11.x"
             otp: "21.x"
             os: "windows-2022"
@@ -1585,10 +1585,10 @@ jobs:
             otp: "23.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.10.x"
-            otp: "23.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.10.x"
+          #   otp: "23.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.10.x"
             otp: "23.x"
             os: "windows-2022"
@@ -1601,10 +1601,10 @@ jobs:
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.10.x"
-            otp: "22.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.10.x"
+          #   otp: "22.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.10.x"
             otp: "22.x"
             os: "windows-2022"
@@ -1617,10 +1617,10 @@ jobs:
             otp: "21.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.10.x"
-            otp: "21.x"
-            os: "windows-2025"
-            type: required
+          # - elixir: "1.10.x"
+          #   otp: "21.x"
+          #   os: "windows-2025"
+          #   type: required
           - elixir: "1.10.x"
             otp: "21.x"
             os: "windows-2022"
