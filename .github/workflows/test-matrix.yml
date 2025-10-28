@@ -338,10 +338,6 @@ jobs:
             type: required
           - elixir: "1.14.x"
             otp: "23.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.14.x"
-            otp: "23.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.14.x"
@@ -400,10 +396,6 @@ jobs:
             type: required
           - elixir: "1.13.x"
             otp: "23.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.13.x"
-            otp: "23.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.13.x"
@@ -417,10 +409,6 @@ jobs:
           - elixir: "1.13.x"
             otp: "23.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.13.x"
-            otp: "22.x"
-            os: "ubuntu-24.04"
             type: required
           - elixir: "1.13.x"
             otp: "22.x"
@@ -462,10 +450,6 @@ jobs:
             type: required
           - elixir: "1.12.x"
             otp: "23.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.12.x"
-            otp: "23.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.12.x"
@@ -479,10 +463,6 @@ jobs:
           - elixir: "1.12.x"
             otp: "23.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.12.x"
-            otp: "22.x"
-            os: "ubuntu-24.04"
             type: required
           - elixir: "1.12.x"
             otp: "22.x"
@@ -513,10 +493,6 @@ jobs:
           # ELIXIR 1.11 (OTP 23-21)
           - elixir: "1.11.x"
             otp: "23.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.11.x"
-            otp: "23.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.11.x"
@@ -533,10 +509,6 @@ jobs:
             type: required
           - elixir: "1.11.x"
             otp: "22.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.11.x"
-            otp: "22.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.11.x"
@@ -550,10 +522,6 @@ jobs:
           - elixir: "1.11.x"
             otp: "22.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.11.x"
-            otp: "21.x"
-            os: "ubuntu-24.04"
             type: required
           - elixir: "1.11.x"
             otp: "21.x"
@@ -575,10 +543,6 @@ jobs:
           # ELIXIR 1.10 (OTP 23-21)
           - elixir: "1.10.x"
             otp: "23.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.10.x"
-            otp: "23.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.10.x"
@@ -595,10 +559,6 @@ jobs:
             type: required
           - elixir: "1.10.x"
             otp: "22.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.10.x"
-            otp: "22.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.10.x"
@@ -612,10 +572,6 @@ jobs:
           - elixir: "1.10.x"
             otp: "22.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.10.x"
-            otp: "21.x"
-            os: "ubuntu-24.04"
             type: required
           - elixir: "1.10.x"
             otp: "21.x"
@@ -637,10 +593,6 @@ jobs:
           # ELIXIR 1.9 (OTP 22-20)
           - elixir: "1.9.x"
             otp: "22.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.9.x"
-            otp: "22.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.9.x"
@@ -657,10 +609,6 @@ jobs:
             type: required
           - elixir: "1.9.x"
             otp: "21.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.9.x"
-            otp: "21.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.9.x"
@@ -674,10 +622,6 @@ jobs:
           - elixir: "1.9.x"
             otp: "21.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.9.x"
-            otp: "20.x"
-            os: "ubuntu-24.04"
             type: required
           - elixir: "1.9.x"
             otp: "20.x"
@@ -699,10 +643,6 @@ jobs:
           # ELIXIR 1.8 (OTP 22-20)
           - elixir: "1.8.x"
             otp: "22.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.8.x"
-            otp: "22.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.8.x"
@@ -719,10 +659,6 @@ jobs:
             type: required
           - elixir: "1.8.x"
             otp: "21.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.8.x"
-            otp: "21.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.8.x"
@@ -736,10 +672,6 @@ jobs:
           - elixir: "1.8.x"
             otp: "21.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.8.x"
-            otp: "20.x"
-            os: "ubuntu-24.04"
             type: required
           - elixir: "1.8.x"
             otp: "20.x"
@@ -766,10 +698,6 @@ jobs:
           # ELIXIR 1.7 (OTP 22-19)
           - elixir: "1.7.x"
             otp: "22.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.7.x"
-            otp: "22.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.7.x"
@@ -786,10 +714,6 @@ jobs:
             type: required
           - elixir: "1.7.x"
             otp: "21.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.7.x"
-            otp: "21.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.7.x"
@@ -803,10 +727,6 @@ jobs:
           - elixir: "1.7.x"
             otp: "21.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.7.x"
-            otp: "20.x"
-            os: "ubuntu-24.04"
             type: required
           - elixir: "1.7.x"
             otp: "20.x"
@@ -848,10 +768,6 @@ jobs:
           # ELIXIR 1.6 (OTP 21-19)
           - elixir: "1.6.x"
             otp: "21.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.6.x"
-            otp: "21.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.6.x"
@@ -865,10 +781,6 @@ jobs:
           - elixir: "1.6.x"
             otp: "21.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.6.x"
-            otp: "20.x"
-            os: "ubuntu-24.04"
             type: required
           - elixir: "1.6.x"
             otp: "20.x"
@@ -1258,10 +1170,6 @@ jobs:
             type: required
           - elixir: "1.14.x"
             otp: "23.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.14.x"
-            otp: "23.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.14.x"
@@ -1320,10 +1228,6 @@ jobs:
             type: required
           - elixir: "1.13.x"
             otp: "23.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.13.x"
-            otp: "23.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.13.x"
@@ -1337,10 +1241,6 @@ jobs:
           - elixir: "1.13.x"
             otp: "23.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.13.x"
-            otp: "22.x"
-            os: "ubuntu-24.04"
             type: required
           - elixir: "1.13.x"
             otp: "22.x"
@@ -1382,10 +1282,6 @@ jobs:
             type: required
           - elixir: "1.12.x"
             otp: "23.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.12.x"
-            otp: "23.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.12.x"
@@ -1399,10 +1295,6 @@ jobs:
           - elixir: "1.12.x"
             otp: "23.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.12.x"
-            otp: "22.x"
-            os: "ubuntu-24.04"
             type: required
           - elixir: "1.12.x"
             otp: "22.x"
@@ -1433,10 +1325,6 @@ jobs:
           # ELIXIR 1.11 (OTP 23-21)
           - elixir: "1.11.x"
             otp: "23.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.11.x"
-            otp: "23.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.11.x"
@@ -1453,10 +1341,6 @@ jobs:
             type: required
           - elixir: "1.11.x"
             otp: "22.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.11.x"
-            otp: "22.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.11.x"
@@ -1470,10 +1354,6 @@ jobs:
           - elixir: "1.11.x"
             otp: "22.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.11.x"
-            otp: "21.x"
-            os: "ubuntu-24.04"
             type: required
           - elixir: "1.11.x"
             otp: "21.x"
@@ -1495,10 +1375,6 @@ jobs:
           # ELIXIR 1.10 (OTP 23-21)
           - elixir: "1.10.x"
             otp: "23.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.10.x"
-            otp: "23.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.10.x"
@@ -1515,10 +1391,6 @@ jobs:
             type: required
           - elixir: "1.10.x"
             otp: "22.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.10.x"
-            otp: "22.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.10.x"
@@ -1532,10 +1404,6 @@ jobs:
           - elixir: "1.10.x"
             otp: "22.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.10.x"
-            otp: "21.x"
-            os: "ubuntu-24.04"
             type: required
           - elixir: "1.10.x"
             otp: "21.x"
@@ -1557,10 +1425,6 @@ jobs:
           # ELIXIR 1.9 (OTP 22-20)
           - elixir: "1.9.x"
             otp: "22.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.9.x"
-            otp: "22.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.9.x"
@@ -1577,10 +1441,6 @@ jobs:
             type: required
           - elixir: "1.9.x"
             otp: "21.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.9.x"
-            otp: "21.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.9.x"
@@ -1594,10 +1454,6 @@ jobs:
           - elixir: "1.9.x"
             otp: "21.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.9.x"
-            otp: "20.x"
-            os: "ubuntu-24.04"
             type: required
           - elixir: "1.9.x"
             otp: "20.x"
@@ -1619,10 +1475,6 @@ jobs:
           # ELIXIR 1.8 (OTP 22-20)
           - elixir: "1.8.x"
             otp: "22.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.8.x"
-            otp: "22.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.8.x"
@@ -1639,10 +1491,6 @@ jobs:
             type: required
           - elixir: "1.8.x"
             otp: "21.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.8.x"
-            otp: "21.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.8.x"
@@ -1656,10 +1504,6 @@ jobs:
           - elixir: "1.8.x"
             otp: "21.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.8.x"
-            otp: "20.x"
-            os: "ubuntu-24.04"
             type: required
           - elixir: "1.8.x"
             otp: "20.x"
@@ -1686,10 +1530,6 @@ jobs:
           # ELIXIR 1.7 (OTP 22-19)
           - elixir: "1.7.x"
             otp: "22.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.7.x"
-            otp: "22.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.7.x"
@@ -1703,10 +1543,6 @@ jobs:
           - elixir: "1.7.x"
             otp: "22.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.7.x"
-            otp: "21.x"
-            os: "ubuntu-24.04"
             type: required
           - elixir: "1.7.x"
             otp: "21.x"
@@ -1726,10 +1562,6 @@ jobs:
             type: required
           - elixir: "1.7.x"
             otp: "20.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.7.x"
-            otp: "20.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.7.x"
@@ -1744,10 +1576,6 @@ jobs:
             otp: "20.x"
             os: "windows-2022"
             type: required
-          # - elixir: "1.7.x"
-          #   otp: "19.x"
-          #   os: "ubuntu-24.04"
-          #   type: required
           # - elixir: "1.7.x"
           #   otp: "19.x"
           #   os: "ubuntu-22.04"
@@ -1768,10 +1596,6 @@ jobs:
           # ELIXIR 1.6 (OTP 21-19)
           - elixir: "1.6.x"
             otp: "21.x"
-            os: "ubuntu-24.04"
-            type: required
-          - elixir: "1.6.x"
-            otp: "21.x"
             os: "ubuntu-22.04"
             type: required
           - elixir: "1.6.x"
@@ -1785,10 +1609,6 @@ jobs:
           - elixir: "1.6.x"
             otp: "21.x"
             os: "windows-2022"
-            type: required
-          - elixir: "1.6.x"
-            otp: "20.x"
-            os: "ubuntu-24.04"
             type: required
           - elixir: "1.6.x"
             otp: "20.x"
@@ -1806,10 +1626,6 @@ jobs:
             otp: "20.x"
             os: "windows-2022"
             type: required
-          # - elixir: "1.6.x"
-          #   otp: "19.x"
-          #   os: "ubuntu-24.04"
-          #   type: required
           # - elixir: "1.6.x"
           #   otp: "19.x"
           #   os: "ubuntu-22.04"
