@@ -34,171 +34,878 @@ jobs:
     strategy:
       matrix:
         os:
-          - "ubuntu-20.04"
-          - "windows-2019"
+          - "ubuntu-24.04"
+          - "ubuntu-22.04"
           - "windows-2022"
+          - "windows-2025"
         elixir:
-          - "1.14.x"
-          - "1.15.x"
-          - "1.16.x"
+          - "1.19.x"
         otp:
-          - "24.x"
-          - "25.x"
-          # - "26.x" # Requires ubuntu-22.04
+          - "28.x"
+          - "27.x"
+          - "26.x"
         type: [required]
         include:
           ####
-          # Additional version combinations we want to check
-          #  See: https://github.com/elixir-lang/elixir/blob/main/lib/elixir/pages/compatibility-and-deprecations.md#compatibility-between-elixir-and-erlangotp
+          # Other versions we want to check
+          # See: https://github.com/elixir-lang/elixir/blob/main/lib/elixir/pages/references/compatibility-and-deprecations.md
+          ##
+
+          ####
+          # SECURITY PATCH ELIXIRS
+          ##
+
+          # ELIXIR 1.18 (OTP 27-25)
+          - elixir: "1.18.x"
+            otp: "27.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.18.x"
+            otp: "27.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.18.x"
+            otp: "27.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.18.x"
+            otp: "27.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.18.x"
+            otp: "26.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.18.x"
+            otp: "26.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.18.x"
+            otp: "26.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.18.x"
+            otp: "26.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.18.x"
+            otp: "25.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.18.x"
+            otp: "25.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.18.x"
+            otp: "25.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.18.x"
+            otp: "25.x"
+            os: "windows-2025"
+            type: required
+
+          # ELIXIR 1.17 (OTP 27-25)
+          - elixir: "1.17.x"
+            otp: "27.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.17.x"
+            otp: "27.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.17.x"
+            otp: "27.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.17.x"
+            otp: "27.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.17.x"
+            otp: "26.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.17.x"
+            otp: "26.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.17.x"
+            otp: "26.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.17.x"
+            otp: "26.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.17.x"
+            otp: "25.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.17.x"
+            otp: "25.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.17.x"
+            otp: "25.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.17.x"
+            otp: "25.x"
+            os: "windows-2025"
+            type: required
+
+          # ELIXIR 1.16 (OTP 26-24)
+          - elixir: "1.16.x"
+            otp: "26.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.16.x"
+            otp: "26.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.16.x"
+            otp: "26.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.16.x"
+            otp: "26.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.16.x"
+            otp: "25.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.16.x"
+            otp: "25.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.16.x"
+            otp: "25.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.16.x"
+            otp: "25.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.16.x"
+            otp: "24.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.16.x"
+            otp: "24.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.16.x"
+            otp: "24.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.16.x"
+            otp: "24.x"
+            os: "windows-2025"
+            type: required
+
+          ##
+          # Elixirs above this point don't work on ubuntu-20.04
+          ##
+
+          # ELIXIR 1.15 (OTP 26-24)
+          - elixir: "1.15.x"
+            otp: "26.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.15.x"
+            otp: "26.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.15.x"
+            otp: "26.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.15.x"
+            otp: "26.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.15.x"
+            otp: "26.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.15.x"
+            otp: "25.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.15.x"
+            otp: "25.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.15.x"
+            otp: "25.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.15.x"
+            otp: "25.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.15.x"
+            otp: "25.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.15.x"
+            otp: "24.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.15.x"
+            otp: "24.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.15.x"
+            otp: "24.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.15.x"
+            otp: "24.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.15.x"
+            otp: "24.x"
+            os: "windows-2022"
+            type: required
+
+          ####
+          # UNMAINTAINED ELIXIRS
+          ##
+
+          # ELIXIR 1.14 (OTP 26-23)
+          - elixir: "1.14.x"
+            otp: "26.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "26.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "26.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "26.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.14.x"
+            otp: "26.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.14.x"
+            otp: "25.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "25.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "25.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "25.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.14.x"
+            otp: "25.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.14.x"
+            otp: "24.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "24.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "24.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "24.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.14.x"
+            otp: "24.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.14.x"
+            otp: "23.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "23.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "23.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "23.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.14.x"
+            otp: "23.x"
+            os: "windows-2022"
+            type: required
+
+          # ELIXIR 1.13 (OTP 25-22)
+          - elixir: "1.13.x"
+            otp: "25.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "25.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "25.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "25.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.13.x"
+            otp: "25.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.13.x"
+            otp: "24.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "24.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "24.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "24.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.13.x"
+            otp: "24.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.13.x"
+            otp: "23.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "23.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "23.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "23.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.13.x"
+            otp: "23.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.13.x"
+            otp: "22.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "22.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "22.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "22.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.13.x"
+            otp: "22.x"
+            os: "windows-2022"
+            type: required
+
+          # ELIXIR 1.12 (OTP 24-22)
+          - elixir: "1.12.x"
+            otp: "24.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.12.x"
+            otp: "24.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.12.x"
+            otp: "24.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.12.x"
+            otp: "24.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.12.x"
+            otp: "24.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.12.x"
+            otp: "23.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.12.x"
+            otp: "23.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.12.x"
+            otp: "23.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.12.x"
+            otp: "23.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.12.x"
+            otp: "23.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.12.x"
+            otp: "22.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.12.x"
+            otp: "22.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.12.x"
+            otp: "22.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.12.x"
+            otp: "22.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.12.x"
+            otp: "22.x"
+            os: "windows-2022"
+            type: required
+
+          ####
+          # ORIGINAL TEST MATRIX
+          #
           # Project was originally only tested on Elixir 1.10-1.11, OTP 22-23, so we should test back to then until a breaking release
           #  See: https://github.com/asummers/erlex/blob/0548765838a08583c83d72d208fde112104a3d2b/.github/workflows/pulls.yml#L11-L12
           # Project was originally claiming it supports back to Elixir 1.6, so we should test back to then until a breaking release
           #  See: https://github.com/asummers/erlex/blob/master/mix.exs#L11
           ##
 
-          # OTP 26+ requires ubuntu-22+
-          - elixir: "1.14.x"
-            otp: "26.x"
+          # ELIXIR 1.11 (OTP 23-21)
+          - elixir: "1.11.x"
+            otp: "23.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.11.x"
+            otp: "23.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.15.x"
-            otp: "26.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.16.x"
-            otp: "26.x"
-            os: "ubuntu-22.04"
-            type: required
-
-          # Elixir 1.14 also supports OTP 23
-          - elixir: "1.14.x"
+          - elixir: "1.11.x"
             otp: "23.x"
             os: "ubuntu-20.04"
             type: required
-
-          # Elixir 1.13 supports OTP 22-25
-          - elixir: "1.13.x"
+          - elixir: "1.11.x"
+            otp: "23.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.11.x"
+            otp: "23.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.11.x"
+            otp: "22.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.11.x"
+            otp: "22.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.11.x"
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.13.x"
-            otp: "23.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.13.x"
-            otp: "24.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.13.x"
-            otp: "25.x"
-            os: "ubuntu-20.04"
-            type: required
-
-          # Elixir 1.12 supports OTP 22-24
-          - elixir: "1.12.x"
+          - elixir: "1.11.x"
             otp: "22.x"
-            os: "ubuntu-20.04"
+            os: "windows-2025"
             type: required
-          - elixir: "1.12.x"
-            otp: "23.x"
-            os: "ubuntu-20.04"
+          - elixir: "1.11.x"
+            otp: "22.x"
+            os: "windows-2022"
             type: required
-          - elixir: "1.12.x"
-            otp: "24.x"
-            os: "ubuntu-20.04"
+          - elixir: "1.11.x"
+            otp: "21.x"
+            os: "ubuntu-24.04"
             type: required
-
-          # Elixir 1.11 supports OTP 21-23
+          - elixir: "1.11.x"
+            otp: "21.x"
+            os: "ubuntu-22.04"
+            type: required
           - elixir: "1.11.x"
             otp: "21.x"
             os: "ubuntu-20.04"
             type: required
           - elixir: "1.11.x"
-            otp: "22.x"
-            os: "ubuntu-20.04"
+            otp: "21.x"
+            os: "windows-2025"
             type: required
           - elixir: "1.11.x"
+            otp: "21.x"
+            os: "windows-2022"
+            type: required
+
+          # ELIXIR 1.10 (OTP 23-21)
+          - elixir: "1.10.x"
+            otp: "23.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.10.x"
+            otp: "23.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.10.x"
             otp: "23.x"
             os: "ubuntu-20.04"
             type: required
-
-          # Elixir 1.10 supports OTP 21-23
+          - elixir: "1.10.x"
+            otp: "23.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.10.x"
+            otp: "23.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.10.x"
+            otp: "22.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.10.x"
+            otp: "22.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.10.x"
+            otp: "22.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.10.x"
+            otp: "22.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.10.x"
+            otp: "22.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.10.x"
+            otp: "21.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.10.x"
+            otp: "21.x"
+            os: "ubuntu-22.04"
+            type: required
           - elixir: "1.10.x"
             otp: "21.x"
             os: "ubuntu-20.04"
             type: required
           - elixir: "1.10.x"
+            otp: "21.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.10.x"
+            otp: "21.x"
+            os: "windows-2022"
+            type: required
+
+          # ELIXIR 1.9 (OTP 22-20)
+          - elixir: "1.9.x"
+            otp: "22.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.9.x"
+            otp: "22.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.9.x"
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.10.x"
-            otp: "23.x"
+          - elixir: "1.9.x"
+            otp: "22.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.9.x"
+            otp: "22.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.9.x"
+            otp: "21.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.9.x"
+            otp: "21.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.9.x"
+            otp: "21.x"
             os: "ubuntu-20.04"
             type: required
-
-          # Elixir 1.9 supports OTP 20-22
+          - elixir: "1.9.x"
+            otp: "21.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.9.x"
+            otp: "21.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.9.x"
+            otp: "20.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.9.x"
+            otp: "20.x"
+            os: "ubuntu-22.04"
+            type: required
           - elixir: "1.9.x"
             otp: "20.x"
             os: "ubuntu-20.04"
             type: required
           - elixir: "1.9.x"
-            otp: "21.x"
-            os: "ubuntu-20.04"
+            otp: "20.x"
+            os: "windows-2025"
             type: required
           - elixir: "1.9.x"
+            otp: "20.x"
+            os: "windows-2022"
+            type: required
+
+          # ELIXIR 1.8 (OTP 22-20)
+          - elixir: "1.8.x"
+            otp: "22.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.8.x"
+            otp: "22.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.8.x"
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-
-          # Elixir 1.8 supports OTP 20-22
+          - elixir: "1.8.x"
+            otp: "22.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.8.x"
+            otp: "22.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.8.x"
+            otp: "21.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.8.x"
+            otp: "21.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.8.x"
+            otp: "21.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.8.x"
+            otp: "21.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.8.x"
+            otp: "21.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.8.x"
+            otp: "20.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.8.x"
+            otp: "20.x"
+            os: "ubuntu-22.04"
+            type: required
           - elixir: "1.8.x"
             otp: "20.x"
             os: "ubuntu-20.04"
             type: required
           - elixir: "1.8.x"
-            otp: "21.x"
-            os: "ubuntu-20.04"
+            otp: "20.x"
+            os: "windows-2025"
             type: required
           - elixir: "1.8.x"
+            otp: "20.x"
+            os: "windows-2022"
+            type: required
+
+          ##
+          # Elixirs below this point work on OTP < 20, which requires ubuntu-18.04
+          #  which is no longer supported by GitHub actions, so we skip them
+          ##
+
+          # ELIXIR 1.7 (OTP 22-19)
+          - elixir: "1.7.x"
+            otp: "22.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.7.x"
+            otp: "22.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.7.x"
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-
-          # Elixir 1.7 supports OTP 19-22
-          #  Note that OTP < 20 requires ubuntu-18.04, which is no longer supported by GitHub actions,
-          #  so we skip it
+          - elixir: "1.7.x"
+            otp: "22.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.7.x"
+            otp: "22.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.7.x"
+            otp: "21.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.7.x"
+            otp: "21.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.7.x"
+            otp: "21.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.7.x"
+            otp: "21.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.7.x"
+            otp: "21.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.7.x"
+            otp: "20.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.7.x"
+            otp: "20.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.7.x"
+            otp: "20.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.7.x"
+            otp: "20.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.7.x"
+            otp: "20.x"
+            os: "windows-2022"
+            type: required
           # - elixir: "1.7.x"
           #   otp: "19.x"
-          #   os: "ubuntu-18.04"
+          #   os: "ubuntu-24.04"
           #   type: required
-          - elixir: "1.7.x"
-            otp: "20.x"
-            os: "ubuntu-20.04"
+          # - elixir: "1.7.x"
+          #   otp: "19.x"
+          #   os: "ubuntu-22.04"
+          #   type: required
+          # - elixir: "1.7.x"
+          #   otp: "19.x"
+          #   os: "ubuntu-20.04"
+          #   type: required
+          # - elixir: "1.7.x"
+          #   otp: "19.x"
+          #   os: "windows-2025"
+          #   type: required
+          # - elixir: "1.7.x"
+          #   otp: "19.x"
+          #   os: "windows-2022"
+          #   type: required
+
+          # ELIXIR 1.6 (OTP 21-19)
+          - elixir: "1.6.x"
+            otp: "21.x"
+            os: "ubuntu-24.04"
             type: required
-          - elixir: "1.7.x"
+          - elixir: "1.6.x"
+            otp: "21.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.6.x"
             otp: "21.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.7.x"
-            otp: "22.x"
+          - elixir: "1.6.x"
+            otp: "21.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.6.x"
+            otp: "21.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.6.x"
+            otp: "20.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.6.x"
+            otp: "20.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.6.x"
+            otp: "20.x"
             os: "ubuntu-20.04"
             type: required
-
-          # Elixir 1.6 supports OTP 19-21
-          #  Note that OTP < 20 requires ubuntu-18.04, which is no longer supported by GitHub actions,
-          #  so we skip it
+          - elixir: "1.6.x"
+            otp: "20.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.6.x"
+            otp: "20.x"
+            os: "windows-2022"
+            type: required
           # - elixir: "1.6.x"
           #   otp: "19.x"
-          #   os: "ubuntu-18.04"
+          #   os: "ubuntu-24.04"
           #   type: required
-          - elixir: "1.6.x"
-            otp: "20.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.6.x"
-            otp: "21.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.6.x"
+          #   otp: "19.x"
+          #   os: "ubuntu-22.04"
+          #   type: required
+          # - elixir: "1.6.x"
+          #   otp: "19.x"
+          #   os: "ubuntu-20.04"
+          #   type: required
+          # - elixir: "1.6.x"
+          #   otp: "19.x"
+          #   os: "windows-2025"
+          #   type: required
+          # - elixir: "1.6.x"
+          #   otp: "19.x"
+          #   os: "windows-2022"
+          #   type: required
 
     steps:
       - uses: actions/checkout@v4
@@ -247,171 +954,878 @@ jobs:
     strategy:
       matrix:
         os:
-          - "ubuntu-20.04"
-          - "windows-2019"
+          - "ubuntu-24.04"
+          - "ubuntu-22.04"
           - "windows-2022"
+          - "windows-2025"
         elixir:
-          - "1.14.x"
-          - "1.15.x"
-          - "1.16.x"
+          - "1.19.x"
         otp:
-          - "24.x"
-          - "25.x"
-          # - "26.x" # Requires ubuntu-22.04
+          - "28.x"
+          - "27.x"
+          - "26.x"
         type: [required]
         include:
           ####
-          # Additional version combinations we want to check
-          #  See: https://github.com/elixir-lang/elixir/blob/main/lib/elixir/pages/compatibility-and-deprecations.md#compatibility-between-elixir-and-erlangotp
+          # Other versions we want to check
+          # See: https://github.com/elixir-lang/elixir/blob/main/lib/elixir/pages/references/compatibility-and-deprecations.md
+          ##
+
+          ####
+          # SECURITY PATCH ELIXIRS
+          ##
+
+          # ELIXIR 1.18 (OTP 27-25)
+          - elixir: "1.18.x"
+            otp: "27.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.18.x"
+            otp: "27.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.18.x"
+            otp: "27.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.18.x"
+            otp: "27.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.18.x"
+            otp: "26.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.18.x"
+            otp: "26.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.18.x"
+            otp: "26.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.18.x"
+            otp: "26.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.18.x"
+            otp: "25.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.18.x"
+            otp: "25.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.18.x"
+            otp: "25.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.18.x"
+            otp: "25.x"
+            os: "windows-2025"
+            type: required
+
+          # ELIXIR 1.17 (OTP 27-25)
+          - elixir: "1.17.x"
+            otp: "27.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.17.x"
+            otp: "27.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.17.x"
+            otp: "27.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.17.x"
+            otp: "27.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.17.x"
+            otp: "26.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.17.x"
+            otp: "26.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.17.x"
+            otp: "26.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.17.x"
+            otp: "26.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.17.x"
+            otp: "25.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.17.x"
+            otp: "25.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.17.x"
+            otp: "25.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.17.x"
+            otp: "25.x"
+            os: "windows-2025"
+            type: required
+
+          # ELIXIR 1.16 (OTP 26-24)
+          - elixir: "1.16.x"
+            otp: "26.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.16.x"
+            otp: "26.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.16.x"
+            otp: "26.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.16.x"
+            otp: "26.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.16.x"
+            otp: "25.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.16.x"
+            otp: "25.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.16.x"
+            otp: "25.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.16.x"
+            otp: "25.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.16.x"
+            otp: "24.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.16.x"
+            otp: "24.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.16.x"
+            otp: "24.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.16.x"
+            otp: "24.x"
+            os: "windows-2025"
+            type: required
+
+          ##
+          # Elixirs above this point don't work on ubuntu-20.04
+          ##
+
+          # ELIXIR 1.15 (OTP 26-24)
+          - elixir: "1.15.x"
+            otp: "26.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.15.x"
+            otp: "26.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.15.x"
+            otp: "26.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.15.x"
+            otp: "26.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.15.x"
+            otp: "26.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.15.x"
+            otp: "25.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.15.x"
+            otp: "25.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.15.x"
+            otp: "25.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.15.x"
+            otp: "25.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.15.x"
+            otp: "25.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.15.x"
+            otp: "24.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.15.x"
+            otp: "24.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.15.x"
+            otp: "24.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.15.x"
+            otp: "24.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.15.x"
+            otp: "24.x"
+            os: "windows-2022"
+            type: required
+
+          ####
+          # UNMAINTAINED ELIXIRS
+          ##
+
+          # ELIXIR 1.14 (OTP 26-23)
+          - elixir: "1.14.x"
+            otp: "26.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "26.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "26.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "26.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.14.x"
+            otp: "26.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.14.x"
+            otp: "25.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "25.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "25.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "25.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.14.x"
+            otp: "25.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.14.x"
+            otp: "24.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "24.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "24.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "24.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.14.x"
+            otp: "24.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.14.x"
+            otp: "23.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "23.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "23.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.14.x"
+            otp: "23.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.14.x"
+            otp: "23.x"
+            os: "windows-2022"
+            type: required
+
+          # ELIXIR 1.13 (OTP 25-22)
+          - elixir: "1.13.x"
+            otp: "25.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "25.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "25.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "25.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.13.x"
+            otp: "25.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.13.x"
+            otp: "24.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "24.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "24.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "24.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.13.x"
+            otp: "24.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.13.x"
+            otp: "23.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "23.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "23.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "23.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.13.x"
+            otp: "23.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.13.x"
+            otp: "22.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "22.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "22.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.13.x"
+            otp: "22.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.13.x"
+            otp: "22.x"
+            os: "windows-2022"
+            type: required
+
+          # ELIXIR 1.12 (OTP 24-22)
+          - elixir: "1.12.x"
+            otp: "24.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.12.x"
+            otp: "24.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.12.x"
+            otp: "24.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.12.x"
+            otp: "24.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.12.x"
+            otp: "24.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.12.x"
+            otp: "23.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.12.x"
+            otp: "23.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.12.x"
+            otp: "23.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.12.x"
+            otp: "23.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.12.x"
+            otp: "23.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.12.x"
+            otp: "22.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.12.x"
+            otp: "22.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.12.x"
+            otp: "22.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.12.x"
+            otp: "22.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.12.x"
+            otp: "22.x"
+            os: "windows-2022"
+            type: required
+
+          ####
+          # ORIGINAL TEST MATRIX
+          #
           # Project was originally only tested on Elixir 1.10-1.11, OTP 22-23, so we should test back to then until a breaking release
           #  See: https://github.com/asummers/erlex/blob/0548765838a08583c83d72d208fde112104a3d2b/.github/workflows/pulls.yml#L11-L12
           # Project was originally claiming it supports back to Elixir 1.6, so we should test back to then until a breaking release
           #  See: https://github.com/asummers/erlex/blob/master/mix.exs#L11
           ##
 
-          # OTP 26+ requires ubuntu-22+
-          - elixir: "1.14.x"
-            otp: "26.x"
+          # ELIXIR 1.11 (OTP 23-21)
+          - elixir: "1.11.x"
+            otp: "23.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.11.x"
+            otp: "23.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.15.x"
-            otp: "26.x"
-            os: "ubuntu-22.04"
-            type: required
-          - elixir: "1.16.x"
-            otp: "26.x"
-            os: "ubuntu-22.04"
-            type: required
-
-          # Elixir 1.14 also supports OTP 23
-          - elixir: "1.14.x"
+          - elixir: "1.11.x"
             otp: "23.x"
             os: "ubuntu-20.04"
             type: required
-
-          # Elixir 1.13 supports OTP 22-25
-          - elixir: "1.13.x"
+          - elixir: "1.11.x"
+            otp: "23.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.11.x"
+            otp: "23.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.11.x"
+            otp: "22.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.11.x"
+            otp: "22.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.11.x"
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.13.x"
-            otp: "23.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.13.x"
-            otp: "24.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.13.x"
-            otp: "25.x"
-            os: "ubuntu-20.04"
-            type: required
-
-          # Elixir 1.12 supports OTP 22-24
-          - elixir: "1.12.x"
+          - elixir: "1.11.x"
             otp: "22.x"
-            os: "ubuntu-20.04"
+            os: "windows-2025"
             type: required
-          - elixir: "1.12.x"
-            otp: "23.x"
-            os: "ubuntu-20.04"
+          - elixir: "1.11.x"
+            otp: "22.x"
+            os: "windows-2022"
             type: required
-          - elixir: "1.12.x"
-            otp: "24.x"
-            os: "ubuntu-20.04"
+          - elixir: "1.11.x"
+            otp: "21.x"
+            os: "ubuntu-24.04"
             type: required
-
-          # Elixir 1.11 supports OTP 21-23
+          - elixir: "1.11.x"
+            otp: "21.x"
+            os: "ubuntu-22.04"
+            type: required
           - elixir: "1.11.x"
             otp: "21.x"
             os: "ubuntu-20.04"
             type: required
           - elixir: "1.11.x"
-            otp: "22.x"
-            os: "ubuntu-20.04"
+            otp: "21.x"
+            os: "windows-2025"
             type: required
           - elixir: "1.11.x"
+            otp: "21.x"
+            os: "windows-2022"
+            type: required
+
+          # ELIXIR 1.10 (OTP 23-21)
+          - elixir: "1.10.x"
+            otp: "23.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.10.x"
+            otp: "23.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.10.x"
             otp: "23.x"
             os: "ubuntu-20.04"
             type: required
-
-          # Elixir 1.10 supports OTP 21-23
+          - elixir: "1.10.x"
+            otp: "23.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.10.x"
+            otp: "23.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.10.x"
+            otp: "22.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.10.x"
+            otp: "22.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.10.x"
+            otp: "22.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.10.x"
+            otp: "22.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.10.x"
+            otp: "22.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.10.x"
+            otp: "21.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.10.x"
+            otp: "21.x"
+            os: "ubuntu-22.04"
+            type: required
           - elixir: "1.10.x"
             otp: "21.x"
             os: "ubuntu-20.04"
             type: required
           - elixir: "1.10.x"
+            otp: "21.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.10.x"
+            otp: "21.x"
+            os: "windows-2022"
+            type: required
+
+          # ELIXIR 1.9 (OTP 22-20)
+          - elixir: "1.9.x"
+            otp: "22.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.9.x"
+            otp: "22.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.9.x"
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.10.x"
-            otp: "23.x"
+          - elixir: "1.9.x"
+            otp: "22.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.9.x"
+            otp: "22.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.9.x"
+            otp: "21.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.9.x"
+            otp: "21.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.9.x"
+            otp: "21.x"
             os: "ubuntu-20.04"
             type: required
-
-          # Elixir 1.9 supports OTP 20-22
+          - elixir: "1.9.x"
+            otp: "21.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.9.x"
+            otp: "21.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.9.x"
+            otp: "20.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.9.x"
+            otp: "20.x"
+            os: "ubuntu-22.04"
+            type: required
           - elixir: "1.9.x"
             otp: "20.x"
             os: "ubuntu-20.04"
             type: required
           - elixir: "1.9.x"
-            otp: "21.x"
-            os: "ubuntu-20.04"
+            otp: "20.x"
+            os: "windows-2025"
             type: required
           - elixir: "1.9.x"
+            otp: "20.x"
+            os: "windows-2022"
+            type: required
+
+          # ELIXIR 1.8 (OTP 22-20)
+          - elixir: "1.8.x"
+            otp: "22.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.8.x"
+            otp: "22.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.8.x"
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-
-          # Elixir 1.8 supports OTP 20-22
+          - elixir: "1.8.x"
+            otp: "22.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.8.x"
+            otp: "22.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.8.x"
+            otp: "21.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.8.x"
+            otp: "21.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.8.x"
+            otp: "21.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.8.x"
+            otp: "21.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.8.x"
+            otp: "21.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.8.x"
+            otp: "20.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.8.x"
+            otp: "20.x"
+            os: "ubuntu-22.04"
+            type: required
           - elixir: "1.8.x"
             otp: "20.x"
             os: "ubuntu-20.04"
             type: required
           - elixir: "1.8.x"
-            otp: "21.x"
-            os: "ubuntu-20.04"
+            otp: "20.x"
+            os: "windows-2025"
             type: required
           - elixir: "1.8.x"
+            otp: "20.x"
+            os: "windows-2022"
+            type: required
+
+          ##
+          # Elixirs below this point work on OTP < 20, which requires ubuntu-18.04
+          #  which is no longer supported by GitHub actions, so we skip them
+          ##
+
+          # ELIXIR 1.7 (OTP 22-19)
+          - elixir: "1.7.x"
+            otp: "22.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.7.x"
+            otp: "22.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.7.x"
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-
-          # Elixir 1.7 supports OTP 19-22
-          #  Note that OTP < 20 requires ubuntu-18.04, which is no longer supported by GitHub actions,
-          #  so we skip it
+          - elixir: "1.7.x"
+            otp: "22.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.7.x"
+            otp: "22.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.7.x"
+            otp: "21.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.7.x"
+            otp: "21.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.7.x"
+            otp: "21.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.7.x"
+            otp: "21.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.7.x"
+            otp: "21.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.7.x"
+            otp: "20.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.7.x"
+            otp: "20.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.7.x"
+            otp: "20.x"
+            os: "ubuntu-20.04"
+            type: required
+          - elixir: "1.7.x"
+            otp: "20.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.7.x"
+            otp: "20.x"
+            os: "windows-2022"
+            type: required
           # - elixir: "1.7.x"
           #   otp: "19.x"
-          #   os: "ubuntu-18.04"
+          #   os: "ubuntu-24.04"
           #   type: required
-          - elixir: "1.7.x"
-            otp: "20.x"
-            os: "ubuntu-20.04"
+          # - elixir: "1.7.x"
+          #   otp: "19.x"
+          #   os: "ubuntu-22.04"
+          #   type: required
+          # - elixir: "1.7.x"
+          #   otp: "19.x"
+          #   os: "ubuntu-20.04"
+          #   type: required
+          # - elixir: "1.7.x"
+          #   otp: "19.x"
+          #   os: "windows-2025"
+          #   type: required
+          # - elixir: "1.7.x"
+          #   otp: "19.x"
+          #   os: "windows-2022"
+          #   type: required
+
+          # ELIXIR 1.6 (OTP 21-19)
+          - elixir: "1.6.x"
+            otp: "21.x"
+            os: "ubuntu-24.04"
             type: required
-          - elixir: "1.7.x"
+          - elixir: "1.6.x"
+            otp: "21.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.6.x"
             otp: "21.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.7.x"
-            otp: "22.x"
+          - elixir: "1.6.x"
+            otp: "21.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.6.x"
+            otp: "21.x"
+            os: "windows-2022"
+            type: required
+          - elixir: "1.6.x"
+            otp: "20.x"
+            os: "ubuntu-24.04"
+            type: required
+          - elixir: "1.6.x"
+            otp: "20.x"
+            os: "ubuntu-22.04"
+            type: required
+          - elixir: "1.6.x"
+            otp: "20.x"
             os: "ubuntu-20.04"
             type: required
-
-          # Elixir 1.6 supports OTP 19-21
-          #  Note that OTP < 20 requires ubuntu-18.04, which is no longer supported by GitHub actions,
-          #  so we skip it
+          - elixir: "1.6.x"
+            otp: "20.x"
+            os: "windows-2025"
+            type: required
+          - elixir: "1.6.x"
+            otp: "20.x"
+            os: "windows-2022"
+            type: required
           # - elixir: "1.6.x"
           #   otp: "19.x"
-          #   os: "ubuntu-18.04"
+          #   os: "ubuntu-24.04"
           #   type: required
-          - elixir: "1.6.x"
-            otp: "20.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.6.x"
-            otp: "21.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.6.x"
+          #   otp: "19.x"
+          #   os: "ubuntu-22.04"
+          #   type: required
+          # - elixir: "1.6.x"
+          #   otp: "19.x"
+          #   os: "ubuntu-20.04"
+          #   type: required
+          # - elixir: "1.6.x"
+          #   otp: "19.x"
+          #   os: "windows-2025"
+          #   type: required
+          # - elixir: "1.6.x"
+          #   otp: "19.x"
+          #   os: "windows-2022"
+          #   type: required
 
     steps:
       - uses: actions/checkout@v4
