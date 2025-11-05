@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased]
 
+Nothing pending.
+
+## [0.2.8][0.2.7...0.2.8] - 2025-11-05
+
+### Fixed
+
+- Support for Elixir 1.19: no longer assumes `Code.format_string!/1` returns a list.
+
 ## [0.2.7][0.2.6...0.2.7] - 2024-06-20
 
 ### Added
@@ -109,7 +117,8 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 - Changelog, CI, docs
 - Initial functionality and tests
 
-[Unreleased]: https://github.com/christhekeele/erlex/compare/v0.2.7...HEAD
+[Unreleased]: https://github.com/christhekeele/erlex/compare/v0.2.8...HEAD
+[0.2.7...0.2.8]: https://github.com/christhekeele/erlex/compare/v0.2.7...0.2.8
 [0.2.6...0.2.7]: https://github.com/christhekeele/erlex/compare/v0.2.6...0.2.7
 [0.2.5...0.2.6]: https://github.com/christhekeele/erlex/compare/v0.2.5...0.2.6
 [0.2.4...0.2.5]: https://github.com/christhekeele/erlex/compare/v0.2.4...0.2.5
