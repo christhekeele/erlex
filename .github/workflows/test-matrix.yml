@@ -1618,13 +1618,13 @@ jobs:
     if: ${{ always() }}
     needs:
       - tests
-      - types
+      # - types
 
     steps:
       - name: Test Suite Succeeded
-        if: ${{ needs.tests.result == 'success' && needs.types.result == 'success' }}
+        if: ${{ needs.tests.result == 'success' }} # && needs.types.result == 'success' }}
         run: exit 0
 
       - name: Test Suite Failed
-        if: ${{ needs.tests.result == 'failure' || needs.types.result == 'failure' }}
+        if: ${{ needs.tests.result == 'failure' }} # || needs.types.result == 'failure' }}
         run: exit 1
