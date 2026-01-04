@@ -122,14 +122,10 @@ defmodule Erlex.MixProject do
       "lint.format": "format --check-formatted",
       "lint.style": "credo --strict",
 
-      # Typecheck tasks
-      typecheck: [
-        "typecheck.run"
-      ],
-      "typecheck.build-cache": "dialyzer --plt --format dialyxir",
-      "typecheck.clean": "dialyzer.clean",
-      "typecheck.explain": "dialyzer.explain --format dialyxir",
-      "typecheck.run": "dialyzer --format dialyxir",
+      # Typecheck tasks (uses custom task - dialyxir has circular dep on erlex)
+      typecheck: "erlex.typecheck",
+      "typecheck.build-cache": "erlex.typecheck --build-plt",
+      "typecheck.clean": "erlex.typecheck --clean",
 
       # Test tasks
       "test.coverage": "coveralls",
@@ -157,7 +153,8 @@ defmodule Erlex.MixProject do
 
   defp deps() do
     [
-      # {:dialyxir, "~> 1.4", only: @dev_envs, runtime: false, override: true}, # Transative dependency on ErlEx
+      # Note: dialyxir cannot be used here - it depends on erlex (circular).
+      # Use `mix erlex.typecheck` instead (see lib/mix/tasks/erlex.typecheck.ex)
       {:excoveralls, "~> 0.18", only: :test},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ] ++ deps(:credo) ++ deps(:nimble_parsec)

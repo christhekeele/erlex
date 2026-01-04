@@ -40,7 +40,6 @@ jobs:
           - "windows-2022"
           - "macOS-15"
           - "macOS-14"
-          - "macOS-13"
         elixir:
           - "1.19.x"
         otp:
@@ -68,6 +67,7 @@ jobs:
             otp: "27.x"
             os: "ubuntu-22.04"
             type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.18.x"
           #   otp: "27.x"
           #   os: "windows-2025"
@@ -84,10 +84,11 @@ jobs:
             otp: "27.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.18.x"
-            otp: "27.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.18.x"
+          # otp: "27.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.18.x"
             otp: "26.x"
             os: "ubuntu-24.04"
@@ -96,6 +97,7 @@ jobs:
             otp: "26.x"
             os: "ubuntu-22.04"
             type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.18.x"
           #   otp: "26.x"
           #   os: "windows-2025"
@@ -112,10 +114,11 @@ jobs:
             otp: "26.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.18.x"
-            otp: "26.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.18.x"
+          # otp: "26.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.18.x"
             otp: "25.x"
             os: "ubuntu-24.04"
@@ -124,6 +127,7 @@ jobs:
             otp: "25.x"
             os: "ubuntu-22.04"
             type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.18.x"
           #   otp: "25.x"
           #   os: "windows-2025"
@@ -140,10 +144,11 @@ jobs:
             otp: "25.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.18.x"
-            otp: "25.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.18.x"
+          # otp: "25.x"
+          # os: "macOS-13"
+          # type: required
 
           # ELIXIR 1.17 (OTP 27-25)
           - elixir: "1.17.x"
@@ -154,6 +159,7 @@ jobs:
             otp: "27.x"
             os: "ubuntu-22.04"
             type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.17.x"
           #   otp: "27.x"
           #   os: "windows-2025"
@@ -170,10 +176,11 @@ jobs:
             otp: "27.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.17.x"
-            otp: "27.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.17.x"
+          # otp: "27.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.17.x"
             otp: "26.x"
             os: "ubuntu-24.04"
@@ -182,6 +189,7 @@ jobs:
             otp: "26.x"
             os: "ubuntu-22.04"
             type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.17.x"
           #   otp: "26.x"
           #   os: "windows-2025"
@@ -198,10 +206,11 @@ jobs:
             otp: "26.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.17.x"
-            otp: "26.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.17.x"
+          # otp: "26.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.17.x"
             otp: "25.x"
             os: "ubuntu-24.04"
@@ -210,6 +219,7 @@ jobs:
             otp: "25.x"
             os: "ubuntu-22.04"
             type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.17.x"
           #   otp: "25.x"
           #   os: "windows-2025"
@@ -226,10 +236,11 @@ jobs:
             otp: "25.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.17.x"
-            otp: "25.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.17.x"
+          # otp: "25.x"
+          # os: "macOS-13"
+          # type: required
 
           ##
           # OTPs <25 below this aren't available on macOS images
@@ -244,6 +255,7 @@ jobs:
             otp: "26.x"
             os: "ubuntu-22.04"
             type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.16.x"
           #   otp: "26.x"
           #   os: "windows-2025"
@@ -260,10 +272,11 @@ jobs:
             otp: "26.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.16.x"
-            otp: "26.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.16.x"
+          # otp: "26.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.16.x"
             otp: "25.x"
             os: "ubuntu-24.04"
@@ -272,6 +285,7 @@ jobs:
             otp: "25.x"
             os: "ubuntu-22.04"
             type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.16.x"
           #   otp: "25.x"
           #   os: "windows-2025"
@@ -288,10 +302,11 @@ jobs:
             otp: "25.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.16.x"
-            otp: "25.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.16.x"
+          # otp: "25.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.16.x"
             otp: "24.x"
             os: "ubuntu-24.04"
@@ -300,6 +315,7 @@ jobs:
             otp: "24.x"
             os: "ubuntu-22.04"
             type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.16.x"
           #   otp: "24.x"
           #   os: "windows-2025"
@@ -322,10 +338,11 @@ jobs:
             otp: "26.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.15.x"
-            otp: "26.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.15.x"
+          # otp: "26.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.15.x"
           #   otp: "26.x"
           #   os: "windows-2025"
@@ -342,10 +359,11 @@ jobs:
             otp: "26.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.15.x"
-            otp: "26.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.15.x"
+          # otp: "26.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.15.x"
             otp: "25.x"
             os: "ubuntu-24.04"
@@ -354,10 +372,11 @@ jobs:
             otp: "25.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.15.x"
-            otp: "25.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.15.x"
+          # otp: "25.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.15.x"
           #   otp: "25.x"
           #   os: "windows-2025"
@@ -374,10 +393,11 @@ jobs:
             otp: "25.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.15.x"
-            otp: "25.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.15.x"
+          # otp: "25.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.15.x"
             otp: "24.x"
             os: "ubuntu-24.04"
@@ -386,10 +406,11 @@ jobs:
             otp: "24.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.15.x"
-            otp: "24.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.15.x"
+          # otp: "24.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.15.x"
           #   otp: "24.x"
           #   os: "windows-2025"
@@ -416,10 +437,11 @@ jobs:
             otp: "26.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.14.x"
-            otp: "26.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.14.x"
+          # otp: "26.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.14.x"
           #   otp: "26.x"
           #   os: "windows-2025"
@@ -436,10 +458,11 @@ jobs:
             otp: "26.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.14.x"
-            otp: "26.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.14.x"
+          # otp: "26.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.14.x"
             otp: "25.x"
             os: "ubuntu-24.04"
@@ -448,10 +471,11 @@ jobs:
             otp: "25.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.14.x"
-            otp: "25.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.14.x"
+          # otp: "25.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.14.x"
           #   otp: "25.x"
           #   os: "windows-2025"
@@ -468,10 +492,11 @@ jobs:
             otp: "25.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.14.x"
-            otp: "25.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.14.x"
+          # otp: "25.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.14.x"
             otp: "24.x"
             os: "ubuntu-24.04"
@@ -480,10 +505,11 @@ jobs:
             otp: "24.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.14.x"
-            otp: "24.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.14.x"
+          # otp: "24.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.14.x"
           #   otp: "24.x"
           #   os: "windows-2025"
@@ -492,10 +518,11 @@ jobs:
             otp: "24.x"
             os: "windows-2022"
             type: required
-          - elixir: "1.14.x"
-            otp: "23.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.14.x"
+          # otp: "23.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.14.x"
           #   otp: "23.x"
           #   os: "windows-2025"
@@ -514,10 +541,11 @@ jobs:
             otp: "25.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.13.x"
-            otp: "25.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.13.x"
+          # otp: "25.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.13.x"
           #   otp: "25.x"
           #   os: "windows-2025"
@@ -534,10 +562,11 @@ jobs:
             otp: "25.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.13.x"
-            otp: "25.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.13.x"
+          # otp: "25.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.13.x"
             otp: "24.x"
             os: "ubuntu-24.04"
@@ -546,10 +575,11 @@ jobs:
             otp: "24.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.13.x"
-            otp: "24.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.13.x"
+          # otp: "24.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.13.x"
           #   otp: "24.x"
           #   os: "windows-2025"
@@ -558,10 +588,11 @@ jobs:
             otp: "24.x"
             os: "windows-2022"
             type: required
-          - elixir: "1.13.x"
-            otp: "23.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.13.x"
+          # otp: "23.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.13.x"
           #   otp: "23.x"
           #   os: "windows-2025"
@@ -570,18 +601,20 @@ jobs:
             otp: "23.x"
             os: "windows-2022"
             type: required
-          - elixir: "1.13.x"
-            otp: "22.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.13.x"
+          # otp: "22.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.13.x"
           #   otp: "22.x"
           #   os: "windows-2025"
           #   type: required
-          - elixir: "1.13.x"
-            otp: "22.x"
-            os: "windows-2022"
-            type: required
+          # OTP 22 crashes on Windows (crypto.dll bug)
+          # - elixir: "1.13.x"
+          #   otp: "22.x"
+          #   os: "windows-2022"
+          #   type: required
 
           # ELIXIR 1.12 (OTP 24-22)
           - elixir: "1.12.x"
@@ -592,10 +625,11 @@ jobs:
             otp: "24.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.12.x"
-            otp: "24.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.12.x"
+          # otp: "24.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.12.x"
           #   otp: "24.x"
           #   os: "windows-2025"
@@ -604,10 +638,11 @@ jobs:
             otp: "24.x"
             os: "windows-2022"
             type: required
-          - elixir: "1.12.x"
-            otp: "23.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.12.x"
+          # otp: "23.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.12.x"
           #   otp: "23.x"
           #   os: "windows-2025"
@@ -616,18 +651,20 @@ jobs:
             otp: "23.x"
             os: "windows-2022"
             type: required
-          - elixir: "1.12.x"
-            otp: "22.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.12.x"
+          # otp: "22.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.12.x"
           #   otp: "22.x"
           #   os: "windows-2025"
           #   type: required
-          - elixir: "1.12.x"
-            otp: "22.x"
-            os: "windows-2022"
-            type: required
+          # OTP 22 crashes on Windows (crypto.dll bug)
+          # - elixir: "1.12.x"
+          #   otp: "22.x"
+          #   os: "windows-2022"
+          #   type: required
 
           ####
           # ORIGINAL TEST MATRIX
@@ -639,10 +676,11 @@ jobs:
           ##
 
           # ELIXIR 1.11 (OTP 23-21)
-          - elixir: "1.11.x"
-            otp: "23.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.11.x"
+          # otp: "23.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.11.x"
           #   otp: "23.x"
           #   os: "windows-2025"
@@ -651,36 +689,27 @@ jobs:
             otp: "23.x"
             os: "windows-2022"
             type: required
-          - elixir: "1.11.x"
-            otp: "22.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.11.x"
+          # otp: "22.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.11.x"
           #   otp: "22.x"
           #   os: "windows-2025"
           #   type: required
-          - elixir: "1.11.x"
-            otp: "22.x"
-            os: "windows-2022"
-            type: required
-          - elixir: "1.11.x"
-            otp: "21.x"
-            os: "ubuntu-20.04"
-            type: required
+          # OTP 22 crashes on Windows (crypto.dll bug)
           # - elixir: "1.11.x"
-          #   otp: "21.x"
-          #   os: "windows-2025"
+          #   otp: "22.x"
+          #   os: "windows-2022"
           #   type: required
-          - elixir: "1.11.x"
-            otp: "21.x"
-            os: "windows-2022"
-            type: required
 
           # ELIXIR 1.10 (OTP 23-21)
-          - elixir: "1.10.x"
-            otp: "23.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.10.x"
+          # otp: "23.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.10.x"
           #   otp: "23.x"
           #   os: "windows-2025"
@@ -689,62 +718,36 @@ jobs:
             otp: "23.x"
             os: "windows-2022"
             type: required
-          - elixir: "1.10.x"
-            otp: "22.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.10.x"
+          # otp: "22.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.10.x"
           #   otp: "22.x"
           #   os: "windows-2025"
           #   type: required
-          - elixir: "1.10.x"
-            otp: "22.x"
-            os: "windows-2022"
-            type: required
-          - elixir: "1.10.x"
-            otp: "21.x"
-            os: "ubuntu-20.04"
-            type: required
+          # OTP 22 crashes on Windows (crypto.dll bug)
           # - elixir: "1.10.x"
-          #   otp: "21.x"
-          #   os: "windows-2025"
+          #   otp: "22.x"
+          #   os: "windows-2022"
           #   type: required
-          - elixir: "1.10.x"
-            otp: "21.x"
-            os: "windows-2022"
-            type: required
 
           ##
           # OTPs <21 below this aren't available on windows images
           ##
 
           # ELIXIR 1.9 (OTP 22-20)
-          - elixir: "1.9.x"
-            otp: "22.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.9.x"
-            otp: "21.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.9.x"
-            otp: "20.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.9.x"
+          # otp: "22.x"
+          # os: "ubuntu-20.04"
+          # type: required
 
           # ELIXIR 1.8 (OTP 22-20)
-          - elixir: "1.8.x"
-            otp: "22.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.8.x"
-            otp: "21.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.8.x"
-            otp: "20.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.8.x"
+          # otp: "22.x"
+          # os: "ubuntu-20.04"
+          # type: required
 
           ##
           # Elixirs below this point work on OTP < 20, which requires ubuntu-18.04
@@ -752,28 +755,12 @@ jobs:
           ##
 
           # ELIXIR 1.7 (OTP 22-19)
-          - elixir: "1.7.x"
-            otp: "22.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.7.x"
-            otp: "21.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.7.x"
-            otp: "20.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.7.x"
+          # otp: "22.x"
+          # os: "ubuntu-20.04"
+          # type: required
 
           # ELIXIR 1.6 (OTP 21-19)
-          - elixir: "1.6.x"
-            otp: "21.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.6.x"
-            otp: "20.x"
-            os: "ubuntu-20.04"
-            type: required
 
     steps:
       - uses: actions/checkout@v4
@@ -784,6 +771,7 @@ jobs:
         with:
           elixir-version: ${{ matrix.elixir }}
           otp-version: ${{ matrix.otp }}
+          install-rebar: ${{ runner.os != 'Windows' }}
 
       - name: Restore mix dependency installation cache
         id: mix-deps-get-cache
@@ -813,8 +801,6 @@ jobs:
         run: mix test
 
   types:
-    # Skip type checking for now
-    if: ${{ !always() }}
     name: Typechecking Matrix
     runs-on: ${{ matrix.os }}
 
@@ -828,7 +814,6 @@ jobs:
           - "windows-2022"
           - "macOS-15"
           - "macOS-14"
-          - "macOS-13"
         elixir:
           - "1.19.x"
         otp:
@@ -856,6 +841,7 @@ jobs:
             otp: "27.x"
             os: "ubuntu-22.04"
             type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.18.x"
           #   otp: "27.x"
           #   os: "windows-2025"
@@ -872,10 +858,11 @@ jobs:
             otp: "27.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.18.x"
-            otp: "27.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.18.x"
+          # otp: "27.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.18.x"
             otp: "26.x"
             os: "ubuntu-24.04"
@@ -884,6 +871,7 @@ jobs:
             otp: "26.x"
             os: "ubuntu-22.04"
             type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.18.x"
           #   otp: "26.x"
           #   os: "windows-2025"
@@ -900,10 +888,11 @@ jobs:
             otp: "26.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.18.x"
-            otp: "26.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.18.x"
+          # otp: "26.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.18.x"
             otp: "25.x"
             os: "ubuntu-24.04"
@@ -912,6 +901,7 @@ jobs:
             otp: "25.x"
             os: "ubuntu-22.04"
             type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.18.x"
           #   otp: "25.x"
           #   os: "windows-2025"
@@ -928,10 +918,11 @@ jobs:
             otp: "25.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.18.x"
-            otp: "25.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.18.x"
+          # otp: "25.x"
+          # os: "macOS-13"
+          # type: required
 
           # ELIXIR 1.17 (OTP 27-25)
           - elixir: "1.17.x"
@@ -942,6 +933,7 @@ jobs:
             otp: "27.x"
             os: "ubuntu-22.04"
             type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.17.x"
           #   otp: "27.x"
           #   os: "windows-2025"
@@ -958,10 +950,11 @@ jobs:
             otp: "27.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.17.x"
-            otp: "27.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.17.x"
+          # otp: "27.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.17.x"
             otp: "26.x"
             os: "ubuntu-24.04"
@@ -970,6 +963,7 @@ jobs:
             otp: "26.x"
             os: "ubuntu-22.04"
             type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.17.x"
           #   otp: "26.x"
           #   os: "windows-2025"
@@ -986,10 +980,11 @@ jobs:
             otp: "26.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.17.x"
-            otp: "26.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.17.x"
+          # otp: "26.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.17.x"
             otp: "25.x"
             os: "ubuntu-24.04"
@@ -998,6 +993,7 @@ jobs:
             otp: "25.x"
             os: "ubuntu-22.04"
             type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.17.x"
           #   otp: "25.x"
           #   os: "windows-2025"
@@ -1014,10 +1010,11 @@ jobs:
             otp: "25.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.17.x"
-            otp: "25.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.17.x"
+          # otp: "25.x"
+          # os: "macOS-13"
+          # type: required
 
           ##
           # OTPs <25 below this aren't available on macOS images
@@ -1032,6 +1029,7 @@ jobs:
             otp: "26.x"
             os: "ubuntu-22.04"
             type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.16.x"
           #   otp: "26.x"
           #   os: "windows-2025"
@@ -1048,10 +1046,11 @@ jobs:
             otp: "26.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.16.x"
-            otp: "26.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.16.x"
+          # otp: "26.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.16.x"
             otp: "25.x"
             os: "ubuntu-24.04"
@@ -1060,6 +1059,7 @@ jobs:
             otp: "25.x"
             os: "ubuntu-22.04"
             type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.16.x"
           #   otp: "25.x"
           #   os: "windows-2025"
@@ -1076,10 +1076,11 @@ jobs:
             otp: "25.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.16.x"
-            otp: "25.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.16.x"
+          # otp: "25.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.16.x"
             otp: "24.x"
             os: "ubuntu-24.04"
@@ -1088,6 +1089,7 @@ jobs:
             otp: "24.x"
             os: "ubuntu-22.04"
             type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.16.x"
           #   otp: "24.x"
           #   os: "windows-2025"
@@ -1110,10 +1112,11 @@ jobs:
             otp: "26.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.15.x"
-            otp: "26.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.15.x"
+          # otp: "26.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.15.x"
           #   otp: "26.x"
           #   os: "windows-2025"
@@ -1130,10 +1133,11 @@ jobs:
             otp: "26.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.15.x"
-            otp: "26.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.15.x"
+          # otp: "26.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.15.x"
             otp: "25.x"
             os: "ubuntu-24.04"
@@ -1142,10 +1146,11 @@ jobs:
             otp: "25.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.15.x"
-            otp: "25.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.15.x"
+          # otp: "25.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.15.x"
           #   otp: "25.x"
           #   os: "windows-2025"
@@ -1162,10 +1167,11 @@ jobs:
             otp: "25.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.15.x"
-            otp: "25.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.15.x"
+          # otp: "25.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.15.x"
             otp: "24.x"
             os: "ubuntu-24.04"
@@ -1174,10 +1180,11 @@ jobs:
             otp: "24.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.15.x"
-            otp: "24.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.15.x"
+          # otp: "24.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.15.x"
           #   otp: "24.x"
           #   os: "windows-2025"
@@ -1204,10 +1211,11 @@ jobs:
             otp: "26.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.14.x"
-            otp: "26.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.14.x"
+          # otp: "26.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.14.x"
           #   otp: "26.x"
           #   os: "windows-2025"
@@ -1224,10 +1232,11 @@ jobs:
             otp: "26.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.14.x"
-            otp: "26.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.14.x"
+          # otp: "26.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.14.x"
             otp: "25.x"
             os: "ubuntu-24.04"
@@ -1236,10 +1245,11 @@ jobs:
             otp: "25.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.14.x"
-            otp: "25.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.14.x"
+          # otp: "25.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.14.x"
           #   otp: "25.x"
           #   os: "windows-2025"
@@ -1256,10 +1266,11 @@ jobs:
             otp: "25.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.14.x"
-            otp: "25.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.14.x"
+          # otp: "25.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.14.x"
             otp: "24.x"
             os: "ubuntu-24.04"
@@ -1268,10 +1279,11 @@ jobs:
             otp: "24.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.14.x"
-            otp: "24.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.14.x"
+          # otp: "24.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.14.x"
           #   otp: "24.x"
           #   os: "windows-2025"
@@ -1280,10 +1292,11 @@ jobs:
             otp: "24.x"
             os: "windows-2022"
             type: required
-          - elixir: "1.14.x"
-            otp: "23.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.14.x"
+          # otp: "23.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.14.x"
           #   otp: "23.x"
           #   os: "windows-2025"
@@ -1302,10 +1315,11 @@ jobs:
             otp: "25.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.13.x"
-            otp: "25.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.13.x"
+          # otp: "25.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.13.x"
           #   otp: "25.x"
           #   os: "windows-2025"
@@ -1322,10 +1336,11 @@ jobs:
             otp: "25.x"
             os: "macOS-14"
             type: required
-          - elixir: "1.13.x"
-            otp: "25.x"
-            os: "macOS-13"
-            type: required
+          # macOS-13 retired (github.com/actions/runner-images/issues/13046)
+          # - elixir: "1.13.x"
+          # otp: "25.x"
+          # os: "macOS-13"
+          # type: required
           - elixir: "1.13.x"
             otp: "24.x"
             os: "ubuntu-24.04"
@@ -1334,10 +1349,11 @@ jobs:
             otp: "24.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.13.x"
-            otp: "24.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.13.x"
+          # otp: "24.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.13.x"
           #   otp: "24.x"
           #   os: "windows-2025"
@@ -1346,10 +1362,11 @@ jobs:
             otp: "24.x"
             os: "windows-2022"
             type: required
-          - elixir: "1.13.x"
-            otp: "23.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.13.x"
+          # otp: "23.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.13.x"
           #   otp: "23.x"
           #   os: "windows-2025"
@@ -1358,18 +1375,20 @@ jobs:
             otp: "23.x"
             os: "windows-2022"
             type: required
-          - elixir: "1.13.x"
-            otp: "22.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.13.x"
+          # otp: "22.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.13.x"
           #   otp: "22.x"
           #   os: "windows-2025"
           #   type: required
-          - elixir: "1.13.x"
-            otp: "22.x"
-            os: "windows-2022"
-            type: required
+          # OTP 22 crashes on Windows (crypto.dll bug)
+          # - elixir: "1.13.x"
+          #   otp: "22.x"
+          #   os: "windows-2022"
+          #   type: required
 
           # ELIXIR 1.12 (OTP 24-22)
           - elixir: "1.12.x"
@@ -1380,10 +1399,11 @@ jobs:
             otp: "24.x"
             os: "ubuntu-22.04"
             type: required
-          - elixir: "1.12.x"
-            otp: "24.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.12.x"
+          # otp: "24.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.12.x"
           #   otp: "24.x"
           #   os: "windows-2025"
@@ -1392,10 +1412,11 @@ jobs:
             otp: "24.x"
             os: "windows-2022"
             type: required
-          - elixir: "1.12.x"
-            otp: "23.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.12.x"
+          # otp: "23.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.12.x"
           #   otp: "23.x"
           #   os: "windows-2025"
@@ -1404,18 +1425,20 @@ jobs:
             otp: "23.x"
             os: "windows-2022"
             type: required
-          - elixir: "1.12.x"
-            otp: "22.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.12.x"
+          # otp: "22.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.12.x"
           #   otp: "22.x"
           #   os: "windows-2025"
           #   type: required
-          - elixir: "1.12.x"
-            otp: "22.x"
-            os: "windows-2022"
-            type: required
+          # OTP 22 crashes on Windows (crypto.dll bug)
+          # - elixir: "1.12.x"
+          #   otp: "22.x"
+          #   os: "windows-2022"
+          #   type: required
 
           ####
           # ORIGINAL TEST MATRIX
@@ -1427,10 +1450,11 @@ jobs:
           ##
 
           # ELIXIR 1.11 (OTP 23-21)
-          - elixir: "1.11.x"
-            otp: "23.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.11.x"
+          # otp: "23.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.11.x"
           #   otp: "23.x"
           #   os: "windows-2025"
@@ -1439,36 +1463,27 @@ jobs:
             otp: "23.x"
             os: "windows-2022"
             type: required
-          - elixir: "1.11.x"
-            otp: "22.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.11.x"
+          # otp: "22.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.11.x"
           #   otp: "22.x"
           #   os: "windows-2025"
           #   type: required
-          - elixir: "1.11.x"
-            otp: "22.x"
-            os: "windows-2022"
-            type: required
-          - elixir: "1.11.x"
-            otp: "21.x"
-            os: "ubuntu-20.04"
-            type: required
+          # OTP 22 crashes on Windows (crypto.dll bug)
           # - elixir: "1.11.x"
-          #   otp: "21.x"
-          #   os: "windows-2025"
+          #   otp: "22.x"
+          #   os: "windows-2022"
           #   type: required
-          - elixir: "1.11.x"
-            otp: "21.x"
-            os: "windows-2022"
-            type: required
 
           # ELIXIR 1.10 (OTP 23-21)
-          - elixir: "1.10.x"
-            otp: "23.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.10.x"
+          # otp: "23.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.10.x"
           #   otp: "23.x"
           #   os: "windows-2025"
@@ -1477,62 +1492,36 @@ jobs:
             otp: "23.x"
             os: "windows-2022"
             type: required
-          - elixir: "1.10.x"
-            otp: "22.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.10.x"
+          # otp: "22.x"
+          # os: "ubuntu-20.04"
+          # type: required
+          # windows-2025 not yet in setup-beam@v1
           # - elixir: "1.10.x"
           #   otp: "22.x"
           #   os: "windows-2025"
           #   type: required
-          - elixir: "1.10.x"
-            otp: "22.x"
-            os: "windows-2022"
-            type: required
-          - elixir: "1.10.x"
-            otp: "21.x"
-            os: "ubuntu-20.04"
-            type: required
+          # OTP 22 crashes on Windows (crypto.dll bug)
           # - elixir: "1.10.x"
-          #   otp: "21.x"
-          #   os: "windows-2025"
+          #   otp: "22.x"
+          #   os: "windows-2022"
           #   type: required
-          - elixir: "1.10.x"
-            otp: "21.x"
-            os: "windows-2022"
-            type: required
 
           ##
           # OTPs <21 below this aren't available on windows images
           ##
 
           # ELIXIR 1.9 (OTP 22-20)
-          - elixir: "1.9.x"
-            otp: "22.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.9.x"
-            otp: "21.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.9.x"
-            otp: "20.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.9.x"
+          # otp: "22.x"
+          # os: "ubuntu-20.04"
+          # type: required
 
           # ELIXIR 1.8 (OTP 22-20)
-          - elixir: "1.8.x"
-            otp: "22.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.8.x"
-            otp: "21.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.8.x"
-            otp: "20.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.8.x"
+          # otp: "22.x"
+          # os: "ubuntu-20.04"
+          # type: required
 
           ##
           # Elixirs below this point work on OTP < 20, which requires ubuntu-18.04
@@ -1540,28 +1529,12 @@ jobs:
           ##
 
           # ELIXIR 1.7 (OTP 22-19)
-          - elixir: "1.7.x"
-            otp: "22.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.7.x"
-            otp: "21.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.7.x"
-            otp: "20.x"
-            os: "ubuntu-20.04"
-            type: required
+          # - elixir: "1.7.x"
+          # otp: "22.x"
+          # os: "ubuntu-20.04"
+          # type: required
 
           # ELIXIR 1.6 (OTP 21-19)
-          - elixir: "1.6.x"
-            otp: "21.x"
-            os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.6.x"
-            otp: "20.x"
-            os: "ubuntu-20.04"
-            type: required
 
     steps:
       - uses: actions/checkout@v4
@@ -1572,6 +1545,7 @@ jobs:
         with:
           elixir-version: ${{ matrix.elixir }}
           otp-version: ${{ matrix.otp }}
+          install-rebar: ${{ runner.os != 'Windows' }}
 
       - name: Restore mix dependency installation cache
         id: mix-deps-get-cache

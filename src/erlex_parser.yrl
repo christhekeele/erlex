@@ -44,6 +44,8 @@ int
 
 Rootsymbol document.
 
+Expect 27.
+
 document -> values : '$1'.
 
 values -> value : ['$1'].
