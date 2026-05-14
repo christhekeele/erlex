@@ -6,7 +6,7 @@ absolutely appreciate any and all help.
 
 ## Issues
 
-Please file issues [here](https://github.com/christhekeele/erlex/issues)
+Please file issues [here](https://github.com/christhekeele/erlex/issues).
 
 ## Documentation
 
@@ -21,7 +21,8 @@ Take a look at the open issues
 plan on working on an issue, so we can discuss approaches and make
 sure there isn't duplicated work happening.
 
-Before submitting a pull request, make sure all of the following pass:
+Before submitting a pull request, try to make sure all of the checks pass,
+and note what does not and why:
 
 ```
 mix deps.get

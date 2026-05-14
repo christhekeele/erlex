@@ -33,6 +33,7 @@ jobs:
         with:
           elixir-version: ${{ env.edge-elixir }}
           otp-version: ${{ env.edge-otp }}
+          install-rebar: ${{ runner.os != 'Windows' }}
 
       - name: Unlock dependencies
         run: mix deps.unlock --all
@@ -47,8 +48,6 @@ jobs:
         run: mix test
 
   types:
-    # Skip type checking for now
-    if: ${{ !always() }}
     name: Typechecking Edge
     runs-on: ${{ vars.PREFERRED_OS }}
 
@@ -61,6 +60,7 @@ jobs:
         with:
           elixir-version: ${{ env.edge-elixir }}
           otp-version: ${{ env.edge-otp }}
+          install-rebar: ${{ runner.os != 'Windows' }}
 
       - name: Unlock dependencies
         run: mix deps.unlock --all
@@ -87,6 +87,7 @@ jobs:
         with:
           elixir-version: ${{ env.edge-elixir }}
           otp-version: ${{ env.edge-otp }}
+          install-rebar: ${{ runner.os != 'Windows' }}
 
       - name: Unlock dependencies
         run: mix deps.unlock --all
