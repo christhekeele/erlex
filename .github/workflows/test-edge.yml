@@ -41,7 +41,11 @@ jobs:
         otp:
           - ${{ vars.PREFERRED_OTP }}
           - ${{ vars.EDGE_OTP }}
-        type: [optional]
+        type: [required]
+        # Exclude non-edge combinations
+        include:
+          - elixir: ${{ vars.PREFERRED_ELIXIR }}
+            otp: ${{ vars.PREFERRED_OTP }}
 
     steps:
       - uses: actions/checkout@v4
@@ -89,7 +93,11 @@ jobs:
         otp:
           - ${{ vars.PREFERRED_OTP }}
           - ${{ vars.EDGE_OTP }}
-        type: [optional]
+        type: [required]
+        # Exclude non-edge combinations
+        exclude:
+          - elixir: ${{ vars.PREFERRED_ELIXIR }}
+            otp: ${{ vars.PREFERRED_OTP }}
 
     steps:
       - uses: actions/checkout@v4
@@ -137,7 +145,11 @@ jobs:
         otp:
           - ${{ vars.PREFERRED_OTP }}
           - ${{ vars.EDGE_OTP }}
-        type: [optional]
+        type: [required]
+        # Exclude non-edge combinations
+        exclude:
+          - elixir: ${{ vars.PREFERRED_ELIXIR }}
+            otp: ${{ vars.PREFERRED_OTP }}
 
     steps:
       - uses: actions/checkout@v4
