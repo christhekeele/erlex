@@ -6,7 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased]
 
-Nothing pending.
+- Nothing pending at time of publication.
+
+## [0.2.9][0.2.8...0.2.9] - 2026-05-14
+
+### Fixed
+
+- Refactored parser to remove compile-time `Warning: conflicts: 27 shift/reduce, 0 reduce/reduce`.
 
 ## [0.2.8][0.2.7...0.2.8] - 2025-11-05
 
@@ -117,15 +123,17 @@ Nothing pending.
 - Changelog, CI, docs
 - Initial functionality and tests
 
-[Unreleased]: https://github.com/christhekeele/erlex/compare/v0.2.8...HEAD
+[Unreleased]: https://github.com/christhekeele/erlex/compare/0.2.9...HEAD
+[0.2.8...0.2.9]: https://github.com/christhekeele/erlex/compare/0.2.8...0.2.9
 [0.2.7...0.2.8]: https://github.com/christhekeele/erlex/compare/v0.2.7...0.2.8
-[0.2.6...0.2.7]: https://github.com/christhekeele/erlex/compare/v0.2.6...0.2.7
-[0.2.5...0.2.6]: https://github.com/christhekeele/erlex/compare/v0.2.5...0.2.6
-[0.2.4...0.2.5]: https://github.com/christhekeele/erlex/compare/v0.2.4...0.2.5
-[0.2.3...0.2.4]: https://github.com/christhekeele/erlex/compare/v0.2.3...0.2.4
-[0.2.2...0.2.3]: https://github.com/christhekeele/erlex/compare/v0.2.2...0.2.3
-[0.2.1...0.2.2]: https://github.com/christhekeele/erlex/compare/v0.2.1...0.2.2
-[0.2.0...0.2.1]: https://github.com/christhekeele/erlex/compare/v0.2.0...0.2.1
+[0.2.7...0.2.8]: https://github.com/christhekeele/erlex/compare/v0.2.7...v0.2.8
+[0.2.6...0.2.7]: https://github.com/christhekeele/erlex/compare/v0.2.6...v0.2.7
+[0.2.5...0.2.6]: https://github.com/christhekeele/erlex/compare/v0.2.5...v0.2.6
+[0.2.4...0.2.5]: https://github.com/christhekeele/erlex/compare/v0.2.4...v0.2.5
+[0.2.3...0.2.4]: https://github.com/christhekeele/erlex/compare/v0.2.3...v0.2.4
+[0.2.2...0.2.3]: https://github.com/christhekeele/erlex/compare/v0.2.2...v0.2.3
+[0.2.1...0.2.2]: https://github.com/christhekeele/erlex/compare/v0.2.1...v0.2.2
+[0.2.0...0.2.1]: https://github.com/christhekeele/erlex/compare/v0.2.0...v0.2.1
 [0.1.6...0.2.0]: https://github.com/christhekeele/erlex/compare/v0.1.6...v0.2.0
 [0.1.5...0.1.6]: https://github.com/christhekeele/erlex/compare/v0.1.5...v0.1.6
 [0.1.4...0.1.5]: https://github.com/christhekeele/erlex/compare/v0.1.4...v0.1.5
