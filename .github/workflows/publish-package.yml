@@ -652,8 +652,8 @@ jobs:
             otp: "22.x"
             os: "windows-2022"
             type: required
-          - elixir: "1.10.x"
           # Retired from erlef/setup-beam: OTP < 22.x
+          # - elixir: "1.10.x"
           #   otp: "21.x"
           #   os: "ubuntu-20.04"
           #   type: required
@@ -710,8 +710,8 @@ jobs:
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.7.x"
           # Retired from erlef/setup-beam: OTP < 22.x
+          # - elixir: "1.7.x"
           #   otp: "21.x"
           #   os: "ubuntu-20.04"
           #   type: required
@@ -1397,8 +1397,8 @@ jobs:
             otp: "22.x"
             os: "windows-2022"
             type: required
-          - elixir: "1.10.x"
           # Retired from erlef/setup-beam: OTP < 22.x
+          # - elixir: "1.10.x"
           #   otp: "21.x"
           #   os: "ubuntu-20.04"
           #   type: required
@@ -1455,8 +1455,8 @@ jobs:
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.7.x"
           # Retired from erlef/setup-beam: OTP < 22.x
+          # - elixir: "1.7.x"
           #   otp: "21.x"
           #   os: "ubuntu-20.04"
           #   type: required
