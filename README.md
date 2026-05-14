@@ -114,7 +114,7 @@ Be sure to read and follow the [code of conduct][code-of-conduct].
 
 [release]: https://github.com/christhekeele/erlex/tree/release
 [release-suite]: https://github.com/christhekeele/erlex/actions/workflows/test-suite.yml?query=workflow%3A%22Test+Suite%22+branch%3Arelease
-[release-suite-badge]: https://img.shields.io/github/actions/workflow/status/christhekeele/erlex/test-suite.yml?branch=release&cacheSeconds=86400&style=flat-square
+[release-suite-badge]: https://github.com/christhekeele/erlex/actions/workflows/test-suite.yml/badge.svg?branch=release
 [release-coverage]: https://coveralls.io/github/christhekeele/erlex?branch=release
 [release-coverage-badge]: https://img.shields.io/coverallsCoverage/github/christhekeele/erlex?branch=release&cacheSeconds=86400&style=flat-square
 
@@ -122,7 +122,7 @@ Be sure to read and follow the [code of conduct][code-of-conduct].
 
 [latest]: https://github.com/christhekeele/erlex/tree/latest
 [latest-suite]: https://github.com/christhekeele/erlex/actions/workflows/test-suite.yml?query=workflow%3A%22Test+Suite%22+branch%3Alatest
-[latest-suite-badge]: https://img.shields.io/github/actions/workflow/status/christhekeele/erlex/test-suite.yml?branch=latest&cacheSeconds=86400&style=flat-square
+[latest-suite-badge]: https://github.com/christhekeele/erlex/actions/workflows/test-suite.yml/badge.svg?branch=latest
 [latest-coverage]: https://coveralls.io/github/christhekeele/erlex?branch=latest
 [latest-coverage-badge]: https://img.shields.io/coverallsCoverage/github/christhekeele/erlex?branch=latest&cacheSeconds=86400&style=flat-square
 
