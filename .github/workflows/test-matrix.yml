@@ -37,7 +37,8 @@ jobs:
         os:
           - "ubuntu-24.04"
           - "ubuntu-22.04"
-          # - "ubuntu-20.04" # Retired
+          # - "ubuntu-20.04" # Only certain old versions
+          # - "ubuntu-18.04" # Retired
           - "windows-2025"
           - "windows-2022"
           - "macOS-15"
@@ -601,14 +602,6 @@ jobs:
             otp: "21.x"
             os: "ubuntu-20.04"
             type: optional
-          - elixir: "1.11.x"
-            otp: "21.x"
-            os: "windows-2025"
-            type: optional
-          - elixir: "1.11.x"
-            otp: "21.x"
-            os: "windows-2022"
-            type: optional
 
           # ELIXIR 1.10 (OTP 23-21)
           - elixir: "1.10.x"
@@ -631,14 +624,6 @@ jobs:
           - elixir: "1.10.x"
             otp: "21.x"
             os: "ubuntu-20.04"
-            type: optional
-          - elixir: "1.10.x"
-            otp: "21.x"
-            os: "windows-2025"
-            type: optional
-          - elixir: "1.10.x"
-            otp: "21.x"
-            os: "windows-2022"
             type: optional
 
           ##
@@ -1319,14 +1304,6 @@ jobs:
             otp: "21.x"
             os: "ubuntu-20.04"
             type: optional
-          - elixir: "1.11.x"
-            otp: "21.x"
-            os: "windows-2025"
-            type: optional
-          - elixir: "1.11.x"
-            otp: "21.x"
-            os: "windows-2022"
-            type: optional
 
           # ELIXIR 1.10 (OTP 23-21)
           - elixir: "1.10.x"
@@ -1349,14 +1326,6 @@ jobs:
           - elixir: "1.10.x"
             otp: "21.x"
             os: "ubuntu-20.04"
-            type: optional
-          - elixir: "1.10.x"
-            otp: "21.x"
-            os: "windows-2025"
-            type: optional
-          - elixir: "1.10.x"
-            otp: "21.x"
-            os: "windows-2022"
             type: optional
 
           ##
