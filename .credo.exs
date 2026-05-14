@@ -19,7 +19,8 @@
         {Credo.Check.Readability.MaxLineLength, false},
         {Credo.Check.Readability.PreferImplicitTry, false},
         {Credo.Check.Refactor.ABCSize},
-        {Credo.Check.Refactor.PipeChainStart}
+        {Credo.Check.Refactor.PipeChainStart},
+        {Credo.Check.Refactor.Apply, files: %{excluded: ["lib/mix/tasks/erlex.typecheck.ex"]}}
       ]
     }
   ]

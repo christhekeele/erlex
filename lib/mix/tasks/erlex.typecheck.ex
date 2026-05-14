@@ -62,7 +62,7 @@ defmodule Mix.Tasks.Erlex.Typecheck do
           :ok
 
         [app_lib | _] ->
-          ebin_path = Path.join(app_lib, "ebin") |> String.to_charlist()
+          ebin_path = app_lib |> Path.join("ebin") |> String.to_charlist()
           :code.add_pathz(ebin_path)
       end
     end)
@@ -109,7 +109,8 @@ defmodule Mix.Tasks.Erlex.Typecheck do
 
   defp run_dialyzer do
     beams =
-      Path.wildcard("_build/#{Mix.env()}/lib/erlex/ebin/*.beam")
+      "_build/#{Mix.env()}/lib/erlex/ebin/*.beam"
+      |> Path.wildcard()
       |> Enum.map(&String.to_charlist/1)
 
     Mix.shell().info("Analyzing #{length(beams)} beam file(s)...")
