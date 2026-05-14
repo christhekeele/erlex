@@ -50,13 +50,6 @@ jobs:
           - "27.x"
           - "26.x"
         type: [required]
-        exclude:
-          # Windows has problems with OTP 22.x from erlef/setup-beam
-          # See: https://github.com/christhekeele/erlex/actions/runs/25879178544/job/76054530611
-          - otp: "22.x"
-            os: "windows-2022"
-          - otp: "22.x"
-            os: "windows-2025"
         include:
           ####
           # Older versions we want to check
@@ -466,6 +459,11 @@ jobs:
             os: "windows-2022"
             type: required
 
+          ####
+          # Windows has problems with OTP < 22.x from erlef/setup-beam, they are excluded past this point
+          #  See: https://github.com/christhekeele/erlex/actions/runs/25879178544/job/76054530611
+          ##
+
           # ELIXIR 1.13 (OTP 25-22)
           - elixir: "1.13.x"
             otp: "25.x"
@@ -531,14 +529,6 @@ jobs:
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.13.x"
-            otp: "22.x"
-            os: "windows-2025"
-            type: required
-          - elixir: "1.13.x"
-            otp: "22.x"
-            os: "windows-2022"
-            type: required
 
           # ELIXIR 1.12 (OTP 24-22)
           - elixir: "1.12.x"
@@ -577,14 +567,6 @@ jobs:
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.12.x"
-            otp: "22.x"
-            os: "windows-2025"
-            type: required
-          - elixir: "1.12.x"
-            otp: "22.x"
-            os: "windows-2022"
-            type: required
 
           ####
           # ORIGINAL TEST MATRIX
@@ -613,14 +595,6 @@ jobs:
           - elixir: "1.11.x"
             otp: "22.x"
             os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.11.x"
-            otp: "22.x"
-            os: "windows-2025"
-            type: required
-          - elixir: "1.11.x"
-            otp: "22.x"
-            os: "windows-2022"
             type: required
           # Optional:  OTP < 22.x are intermittently unavailable from erlef/setup-beam
           - elixir: "1.11.x"
@@ -652,14 +626,6 @@ jobs:
           - elixir: "1.10.x"
             otp: "22.x"
             os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.10.x"
-            otp: "22.x"
-            os: "windows-2025"
-            type: required
-          - elixir: "1.10.x"
-            otp: "22.x"
-            os: "windows-2022"
             type: required
           # Optional:  OTP < 22.x are intermittently unavailable from erlef/setup-beam
           - elixir: "1.10.x"
@@ -802,13 +768,6 @@ jobs:
           - "27.x"
           - "26.x"
         type: [required]
-        exclude:
-          # Windows has problems with OTP 22.x from erlef/setup-beam
-          # See: https://github.com/christhekeele/erlex/actions/runs/25879178544/job/76054530611
-          - otp: "22.x"
-            os: "windows-2022"
-          - otp: "22.x"
-            os: "windows-2025"
         include:
           ####
           # Older versions we want to check
@@ -1218,6 +1177,11 @@ jobs:
             os: "windows-2022"
             type: required
 
+          ####
+          # Windows has problems with OTP < 22.x from erlef/setup-beam, they are excluded past this point
+          #  See: https://github.com/christhekeele/erlex/actions/runs/25879178544/job/76054530611
+          ##
+
           # ELIXIR 1.13 (OTP 25-22)
           - elixir: "1.13.x"
             otp: "25.x"
@@ -1283,14 +1247,6 @@ jobs:
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.13.x"
-            otp: "22.x"
-            os: "windows-2025"
-            type: required
-          - elixir: "1.13.x"
-            otp: "22.x"
-            os: "windows-2022"
-            type: required
 
           # ELIXIR 1.12 (OTP 24-22)
           - elixir: "1.12.x"
@@ -1329,14 +1285,6 @@ jobs:
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          - elixir: "1.12.x"
-            otp: "22.x"
-            os: "windows-2025"
-            type: required
-          - elixir: "1.12.x"
-            otp: "22.x"
-            os: "windows-2022"
-            type: required
 
           ####
           # ORIGINAL TEST MATRIX
@@ -1365,14 +1313,6 @@ jobs:
           - elixir: "1.11.x"
             otp: "22.x"
             os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.11.x"
-            otp: "22.x"
-            os: "windows-2025"
-            type: required
-          - elixir: "1.11.x"
-            otp: "22.x"
-            os: "windows-2022"
             type: required
           # Optional:  OTP < 22.x are intermittently unavailable from erlef/setup-beam
           - elixir: "1.11.x"
@@ -1404,14 +1344,6 @@ jobs:
           - elixir: "1.10.x"
             otp: "22.x"
             os: "ubuntu-20.04"
-            type: required
-          - elixir: "1.10.x"
-            otp: "22.x"
-            os: "windows-2025"
-            type: required
-          - elixir: "1.10.x"
-            otp: "22.x"
-            os: "windows-2022"
             type: required
           # Optional:  OTP < 22.x are intermittently unavailable from erlef/setup-beam
           - elixir: "1.10.x"
