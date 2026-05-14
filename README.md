@@ -1,12 +1,14 @@
-# Erlex
-
 > [!IMPORTANT]
 >
 > [This fork (@christhekeele)][current] of `erlex` is the official version currently being released on [hex.pm][hex-pm-package].
 >
 > Please direct [issues and pull requests][contributing] to the fork, rather than [the original (@asummers) repository][unmaintained], which is unmaintained.
 
-> **_Converts Erlang style structs and error messages to equivalent Elixir._** _Useful for pretty printing things like Dialyzer errors and Observer state._
+# Erlex
+
+> **_Converts Erlang style structs and error messages to equivalent Elixir._**
+>
+> _Useful for pretty printing things like Dialyzer errors and Observer state._
 
 [![Version][hex-pm-version-badge]][hex-pm-versions]
 [![Documentation][docs-badge]][docs]
@@ -32,10 +34,6 @@ end
 ```
 
 ## Usage
-
-> [!NOTE]
->
-> Because this code calls the Elixir formatter, it requires Elixir 1.6+.
 
 Invoke `Erlex.pretty_print/1` with the input string.
 
@@ -69,6 +67,14 @@ iex> Erlex.pretty_print_contract(str)
 ## Changelog
 
 Check out the [Changelog][changelog].
+
+## Compatibility
+
+Because this code calls the Elixir formatter, it requires Elixir 1.6+.
+
+We [try to test against][test-matrix] against all supported combinations of OSs and Elixir and Erlang versions since Elixir 1.6.
+
+We also [try to test][test-edge] against upcoming versions of both Elixir and Erlang to get ahead of any changes.
 
 ## Contributing
 
