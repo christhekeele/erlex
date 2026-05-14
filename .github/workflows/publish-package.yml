@@ -31,6 +31,7 @@ jobs:
 
     continue-on-error: ${{ matrix.type == 'optional' }}
     strategy:
+      fail-fast: false
       matrix:
         os:
           - "ubuntu-24.04"
@@ -768,6 +769,7 @@ jobs:
 
     continue-on-error: ${{ matrix.type == 'optional' }}
     strategy:
+      fail-fast: false
       matrix:
         os:
           - "ubuntu-24.04"
