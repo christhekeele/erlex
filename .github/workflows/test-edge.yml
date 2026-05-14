@@ -11,8 +11,6 @@ on:
     - cron: 0 0 * * *
 
 env:
-  edge-elixir: master
-  edge-otp: latest
   MIX_ENV: test
 
 concurrency:
@@ -22,7 +20,27 @@ concurrency:
 jobs:
   tests:
     name: Testing Edge
-    runs-on: ${{ vars.PREFERRED_OS }}
+    runs-on: ${{ matrix.os }}
+
+    continue-on-error: ${{ matrix.type == 'optional' }}
+    strategy:
+      matrix:
+        os:
+          - "ubuntu-24.04"
+          - "ubuntu-22.04"
+          # - "ubuntu-20.04" # Retired
+          - "windows-2025"
+          - "windows-2022"
+          - "macOS-15"
+          - "macOS-14"
+          # - "macOS-13" # Retired
+        elixir:
+          - ${{ vars.PREFERRED_ELIXIR }}
+          - ${{ vars.EDGE_ELIXIR }}
+        otp:
+          - ${{ vars.PREFERRED_OTP }}
+          - ${{ vars.EDGE_OTP }}
+        type: [optional]
 
     steps:
       - uses: actions/checkout@v4
@@ -31,8 +49,8 @@ jobs:
         id: beam-versions
         uses: erlef/setup-beam@v1
         with:
-          elixir-version: ${{ env.edge-elixir }}
-          otp-version: ${{ env.edge-otp }}
+          elixir-version: ${{ matrix.elixir }}
+          otp-version: ${{ matrix.otp }}
           install-rebar: ${{ runner.os != 'Windows' }}
 
       - name: Unlock dependencies
@@ -49,7 +67,27 @@ jobs:
 
   types:
     name: Typechecking Edge
-    runs-on: ${{ vars.PREFERRED_OS }}
+    runs-on: ${{ matrix.os }}
+
+    continue-on-error: ${{ matrix.type == 'optional' }}
+    strategy:
+      matrix:
+        os:
+          - "ubuntu-24.04"
+          - "ubuntu-22.04"
+          # - "ubuntu-20.04" # Retired
+          - "windows-2025"
+          - "windows-2022"
+          - "macOS-15"
+          - "macOS-14"
+          # - "macOS-13" # Retired
+        elixir:
+          - ${{ vars.PREFERRED_ELIXIR }}
+          - ${{ vars.EDGE_ELIXIR }}
+        otp:
+          - ${{ vars.PREFERRED_OTP }}
+          - ${{ vars.EDGE_OTP }}
+        type: [optional]
 
     steps:
       - uses: actions/checkout@v4
@@ -58,8 +96,8 @@ jobs:
         id: beam-versions
         uses: erlef/setup-beam@v1
         with:
-          elixir-version: ${{ env.edge-elixir }}
-          otp-version: ${{ env.edge-otp }}
+          elixir-version: ${{ matrix.elixir }}
+          otp-version: ${{ matrix.otp }}
           install-rebar: ${{ runner.os != 'Windows' }}
 
       - name: Unlock dependencies
@@ -76,7 +114,27 @@ jobs:
 
   lints:
     name: Linting Edge
-    runs-on: ${{ vars.PREFERRED_OS }}
+    runs-on: ${{ matrix.os }}
+
+    continue-on-error: ${{ matrix.type == 'optional' }}
+    strategy:
+      matrix:
+        os:
+          - "ubuntu-24.04"
+          - "ubuntu-22.04"
+          # - "ubuntu-20.04" # Retired
+          - "windows-2025"
+          - "windows-2022"
+          - "macOS-15"
+          - "macOS-14"
+          # - "macOS-13" # Retired
+        elixir:
+          - ${{ vars.PREFERRED_ELIXIR }}
+          - ${{ vars.EDGE_ELIXIR }}
+        otp:
+          - ${{ vars.PREFERRED_OTP }}
+          - ${{ vars.EDGE_OTP }}
+        type: [optional]
 
     steps:
       - uses: actions/checkout@v4
@@ -85,8 +143,8 @@ jobs:
         id: beam-versions
         uses: erlef/setup-beam@v1
         with:
-          elixir-version: ${{ env.edge-elixir }}
-          otp-version: ${{ env.edge-otp }}
+          elixir-version: ${{ matrix.elixir }}
+          otp-version: ${{ matrix.otp }}
           install-rebar: ${{ runner.os != 'Windows' }}
 
       - name: Unlock dependencies
