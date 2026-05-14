@@ -2,7 +2,7 @@
 >
 > [This fork (@christhekeele)][current] of `erlex` is the official version currently being released on [hex.pm][hex-pm-package].
 >
-> Please direct [issues and pull requests][contributing] to the fork, rather than [the original (@asummers) repository][unmaintained], which is unmaintained.
+> Please direct [issues and pull requests][contributing] to this fork, rather than [the original (@asummers) repository][unmaintained], which is unmaintained.
 
 # Erlex
 
