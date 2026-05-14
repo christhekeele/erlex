@@ -94,6 +94,7 @@ defmodule Erlex.MixProject do
 
       # Clean tasks
       clean: [
+        &clean_parser_artifacts/1,
         &clean_extra_folders/1,
         "typecheck.clean",
         &clean_build_folders/1
@@ -228,6 +229,10 @@ defmodule Erlex.MixProject do
     dev_overrides = ["docs", "hex.publish"] |> Enum.map(&{&1, :dev})
 
     test_by_default ++ dev_overrides
+  end
+
+  defp clean_parser_artifacts(_) do
+    ~w[src/erlex_lexer.erl src/erlex_parser.erl] |> Enum.map(&File.rm_rf!/1)
   end
 
   defp clean_build_folders(_) do
