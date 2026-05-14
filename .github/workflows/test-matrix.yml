@@ -733,6 +733,7 @@ jobs:
         with:
           elixir-version: ${{ matrix.elixir }}
           otp-version: ${{ matrix.otp }}
+          install-rebar: ${{ runner.os != 'Windows' }}
 
       - name: Restore mix dependency installation cache
         id: mix-deps-get-cache
@@ -1468,6 +1469,7 @@ jobs:
         with:
           elixir-version: ${{ matrix.elixir }}
           otp-version: ${{ matrix.otp }}
+          install-rebar: ${{ runner.os != 'Windows' }}
 
       - name: Restore mix dependency installation cache
         id: mix-deps-get-cache
