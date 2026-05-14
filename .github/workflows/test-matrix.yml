@@ -50,11 +50,18 @@ jobs:
           - "27.x"
           - "26.x"
         type: [required]
+        exclude:
+          # Windows has problems with OTP 22.x from erlef/setup-beam
+          # See: https://github.com/christhekeele/erlex/actions/runs/25879178544/job/76054530611
+          - otp: "22.x"
+            os: "windows-2022"
+          - otp: "22.x"
+            os: "windows-2025"
         include:
           ####
-          # Other versions we want to check
+          # Older versions we want to check
           # See Elixir versions: https://github.com/elixir-lang/elixir/blob/main/lib/elixir/pages/references/compatibility-and-deprecations.md
-          # and beam-setup versions: https://github.com/erlef/setup-beam?tab=readme-ov-file#compatibility-between-operating-system-and-erlangotp
+          # and erlef/setup-beam versions: https://github.com/erlef/setup-beam?tab=readme-ov-file#compatibility-between-operating-system-and-erlangotp
           ##
 
           ####
@@ -584,9 +591,10 @@ jobs:
           #
           # Project was originally only tested on Elixir 1.10-1.11, OTP 22-23, so we should test back to then until a breaking release
           #  See: https://github.com/asummers/erlex/blob/0548765838a08583c83d72d208fde112104a3d2b/.github/workflows/pulls.yml#L11-L12
-          # Project was originally claiming it supports back to Elixir 1.6, so we should test back to then until a breaking release
+          # Project was originally asserting it supports back to Elixir 1.6, so we should test back to then until a breaking release
           #  See: https://github.com/asummers/erlex/blob/master/mix.exs#L11
-          # OTP 21.x and older is retired in erlef/setup-beam, so we omit that in these matrices.
+          # OTP < 22.x are intermittently unavailable from erlef/setup-beam,
+          #  so we mark them as optional.
           ##
 
           # ELIXIR 1.11 (OTP 23-21)
@@ -614,19 +622,19 @@ jobs:
             otp: "22.x"
             os: "windows-2022"
             type: required
-          # Retired from erlef/setup-beam: OTP < 22.x
-          # - elixir: "1.11.x"
-          #   otp: "21.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
-          # - elixir: "1.11.x"
-          #   otp: "21.x"
-          #   os: "windows-2025"
-          #   type: required
-          # - elixir: "1.11.x"
-          #   otp: "21.x"
-          #   os: "windows-2022"
-          #   type: required
+          # Optional:  OTP < 22.x are intermittently unavailable from erlef/setup-beam
+          - elixir: "1.11.x"
+            otp: "21.x"
+            os: "ubuntu-20.04"
+            type: optional
+          - elixir: "1.11.x"
+            otp: "21.x"
+            os: "windows-2025"
+            type: optional
+          - elixir: "1.11.x"
+            otp: "21.x"
+            os: "windows-2022"
+            type: optional
 
           # ELIXIR 1.10 (OTP 23-21)
           - elixir: "1.10.x"
@@ -653,19 +661,19 @@ jobs:
             otp: "22.x"
             os: "windows-2022"
             type: required
-          # Retired from erlef/setup-beam: OTP < 22.x
-          # - elixir: "1.10.x"
-          #   otp: "21.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
-          # - elixir: "1.10.x"
-          #   otp: "21.x"
-          #   os: "windows-2025"
-          #   type: required
-          # - elixir: "1.10.x"
-          #   otp: "21.x"
-          #   os: "windows-2022"
-          #   type: required
+          # Optional:  OTP < 22.x are intermittently unavailable from erlef/setup-beam
+          - elixir: "1.10.x"
+            otp: "21.x"
+            os: "ubuntu-20.04"
+            type: optional
+          - elixir: "1.10.x"
+            otp: "21.x"
+            os: "windows-2025"
+            type: optional
+          - elixir: "1.10.x"
+            otp: "21.x"
+            os: "windows-2022"
+            type: optional
 
           ##
           # OTPs <21 below this aren't available on windows images
@@ -676,30 +684,30 @@ jobs:
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          # Retired from erlef/setup-beam: OTP < 22.x
-          # - elixir: "1.9.x"
-          #   otp: "21.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
-          # - elixir: "1.9.x"
-          #   otp: "20.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
+          # Optional:  OTP < 22.x are intermittently unavailable from erlef/setup-beam
+          - elixir: "1.9.x"
+            otp: "21.x"
+            os: "ubuntu-20.04"
+            type: optional
+          - elixir: "1.9.x"
+            otp: "20.x"
+            os: "ubuntu-20.04"
+            type: optional
 
           # ELIXIR 1.8 (OTP 22-20)
           - elixir: "1.8.x"
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          # Retired from erlef/setup-beam: OTP < 22.x
-          # - elixir: "1.8.x"
-          #   otp: "21.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
-          # - elixir: "1.8.x"
-          #   otp: "20.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
+          # Optional:  OTP < 22.x are intermittently unavailable from erlef/setup-beam
+          - elixir: "1.8.x"
+            otp: "21.x"
+            os: "ubuntu-20.04"
+            type: optional
+          - elixir: "1.8.x"
+            otp: "20.x"
+            os: "ubuntu-20.04"
+            type: optional
 
           ##
           # Elixirs below this point work on OTP < 20, which requires ubuntu-18.04
@@ -711,26 +719,26 @@ jobs:
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          # Retired from erlef/setup-beam: OTP < 22.x
-          # - elixir: "1.7.x"
-          #   otp: "21.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
-          # - elixir: "1.7.x"
-          #   otp: "20.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
+          # Optional:  OTP < 22.x are intermittently unavailable from erlef/setup-beam
+          - elixir: "1.7.x"
+            otp: "21.x"
+            os: "ubuntu-20.04"
+            type: optional
+          - elixir: "1.7.x"
+            otp: "20.x"
+            os: "ubuntu-20.04"
+            type: optional
 
           # ELIXIR 1.6 (OTP 21-19)
-          # Retired from erlef/setup-beam: OTP < 22.x
-          # - elixir: "1.6.x"
-          #   otp: "21.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
-          # - elixir: "1.6.x"
-          #   otp: "20.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
+          # Optional:  OTP < 22.x are intermittently unavailable from erlef/setup-beam
+          - elixir: "1.6.x"
+            otp: "21.x"
+            os: "ubuntu-20.04"
+            type: optional
+          - elixir: "1.6.x"
+            otp: "20.x"
+            os: "ubuntu-20.04"
+            type: optional
 
     steps:
       - uses: actions/checkout@v4
@@ -794,11 +802,18 @@ jobs:
           - "27.x"
           - "26.x"
         type: [required]
+        exclude:
+          # Windows has problems with OTP 22.x from erlef/setup-beam
+          # See: https://github.com/christhekeele/erlex/actions/runs/25879178544/job/76054530611
+          - otp: "22.x"
+            os: "windows-2022"
+          - otp: "22.x"
+            os: "windows-2025"
         include:
           ####
-          # Other versions we want to check
+          # Older versions we want to check
           # See Elixir versions: https://github.com/elixir-lang/elixir/blob/main/lib/elixir/pages/references/compatibility-and-deprecations.md
-          # and beam-setup versions: https://github.com/erlef/setup-beam?tab=readme-ov-file#compatibility-between-operating-system-and-erlangotp
+          # and erlef/setup-beam versions: https://github.com/erlef/setup-beam?tab=readme-ov-file#compatibility-between-operating-system-and-erlangotp
           ##
 
           ####
@@ -1328,9 +1343,10 @@ jobs:
           #
           # Project was originally only tested on Elixir 1.10-1.11, OTP 22-23, so we should test back to then until a breaking release
           #  See: https://github.com/asummers/erlex/blob/0548765838a08583c83d72d208fde112104a3d2b/.github/workflows/pulls.yml#L11-L12
-          # Project was originally claiming it supports back to Elixir 1.6, so we should test back to then until a breaking release
+          # Project was originally asserting it supports back to Elixir 1.6, so we should test back to then until a breaking release
           #  See: https://github.com/asummers/erlex/blob/master/mix.exs#L11
-          # OTP 21.x and older is retired in erlef/setup-beam, so we omit that in these matrices.
+          # OTP < 22.x are intermittently unavailable from erlef/setup-beam,
+          #  so we mark them as optional.
           ##
 
           # ELIXIR 1.11 (OTP 23-21)
@@ -1358,19 +1374,19 @@ jobs:
             otp: "22.x"
             os: "windows-2022"
             type: required
-          # Retired from erlef/setup-beam: OTP < 22.x
-          # - elixir: "1.11.x"
-          #   otp: "21.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
-          # - elixir: "1.11.x"
-          #   otp: "21.x"
-          #   os: "windows-2025"
-          #   type: required
-          # - elixir: "1.11.x"
-          #   otp: "21.x"
-          #   os: "windows-2022"
-          #   type: required
+          # Optional:  OTP < 22.x are intermittently unavailable from erlef/setup-beam
+          - elixir: "1.11.x"
+            otp: "21.x"
+            os: "ubuntu-20.04"
+            type: optional
+          - elixir: "1.11.x"
+            otp: "21.x"
+            os: "windows-2025"
+            type: optional
+          - elixir: "1.11.x"
+            otp: "21.x"
+            os: "windows-2022"
+            type: optional
 
           # ELIXIR 1.10 (OTP 23-21)
           - elixir: "1.10.x"
@@ -1397,19 +1413,19 @@ jobs:
             otp: "22.x"
             os: "windows-2022"
             type: required
-          # Retired from erlef/setup-beam: OTP < 22.x
-          # - elixir: "1.10.x"
-          #   otp: "21.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
-          # - elixir: "1.10.x"
-          #   otp: "21.x"
-          #   os: "windows-2025"
-          #   type: required
-          # - elixir: "1.10.x"
-          #   otp: "21.x"
-          #   os: "windows-2022"
-          #   type: required
+          # Optional:  OTP < 22.x are intermittently unavailable from erlef/setup-beam
+          - elixir: "1.10.x"
+            otp: "21.x"
+            os: "ubuntu-20.04"
+            type: optional
+          - elixir: "1.10.x"
+            otp: "21.x"
+            os: "windows-2025"
+            type: optional
+          - elixir: "1.10.x"
+            otp: "21.x"
+            os: "windows-2022"
+            type: optional
 
           ##
           # OTPs <21 below this aren't available on windows images
@@ -1420,30 +1436,30 @@ jobs:
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          # Retired from erlef/setup-beam: OTP < 22.x
-          # - elixir: "1.9.x"
-          #   otp: "21.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
-          # - elixir: "1.9.x"
-          #   otp: "20.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
+          # Optional:  OTP < 22.x are intermittently unavailable from erlef/setup-beam
+          - elixir: "1.9.x"
+            otp: "21.x"
+            os: "ubuntu-20.04"
+            type: optional
+          - elixir: "1.9.x"
+            otp: "20.x"
+            os: "ubuntu-20.04"
+            type: optional
 
           # ELIXIR 1.8 (OTP 22-20)
           - elixir: "1.8.x"
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          # Retired from erlef/setup-beam: OTP < 22.x
-          # - elixir: "1.8.x"
-          #   otp: "21.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
-          # - elixir: "1.8.x"
-          #   otp: "20.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
+          # Optional:  OTP < 22.x are intermittently unavailable from erlef/setup-beam
+          - elixir: "1.8.x"
+            otp: "21.x"
+            os: "ubuntu-20.04"
+            type: optional
+          - elixir: "1.8.x"
+            otp: "20.x"
+            os: "ubuntu-20.04"
+            type: optional
 
           ##
           # Elixirs below this point work on OTP < 20, which requires ubuntu-18.04
@@ -1455,26 +1471,26 @@ jobs:
             otp: "22.x"
             os: "ubuntu-20.04"
             type: required
-          # Retired from erlef/setup-beam: OTP < 22.x
-          # - elixir: "1.7.x"
-          #   otp: "21.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
-          # - elixir: "1.7.x"
-          #   otp: "20.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
+          # Optional:  OTP < 22.x are intermittently unavailable from erlef/setup-beam
+          - elixir: "1.7.x"
+            otp: "21.x"
+            os: "ubuntu-20.04"
+            type: optional
+          - elixir: "1.7.x"
+            otp: "20.x"
+            os: "ubuntu-20.04"
+            type: optional
 
           # ELIXIR 1.6 (OTP 21-19)
-          # Retired from erlef/setup-beam: OTP < 22.x
-          # - elixir: "1.6.x"
-          #   otp: "21.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
-          # - elixir: "1.6.x"
-          #   otp: "20.x"
-          #   os: "ubuntu-20.04"
-          #   type: required
+          # Optional:  OTP < 22.x are intermittently unavailable from erlef/setup-beam
+          - elixir: "1.6.x"
+            otp: "21.x"
+            os: "ubuntu-20.04"
+            type: optional
+          - elixir: "1.6.x"
+            otp: "20.x"
+            os: "ubuntu-20.04"
+            type: optional
 
     steps:
       - uses: actions/checkout@v4
