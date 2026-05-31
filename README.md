@@ -1,6 +1,6 @@
 > [!IMPORTANT]
 >
-> [This fork (@christhekeele)][current] of `erlex` is the official version currently being released on [hex.pm][hex-pm-package].
+> [This fork (@christhekeele)][current] of `Erlex` is the official version currently being released on [hex.pm][hex-pm-package].
 >
 > Please direct [issues and pull requests][contributing] to this fork, rather than [the original (@asummers) repository][unmaintained], which is unmaintained.
 
@@ -23,7 +23,7 @@
 
 ## Installation
 
-The package can be installed from Hex by adding `erlex` to your list of dependencies in `mix.exs`:
+The package can be installed from Hex by adding `:erlex` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -42,6 +42,10 @@ iex> str = ~S"('Elixir.Plug.Conn':t(),binary() | atom(),'Elixir.Keyword':t() | m
 iex> Erlex.pretty_print(str)
 (Plug.Conn.t(), binary() | atom(), Keyword.t() | map()) :: Plug.Conn.t()
 ```
+
+> [!WARNING]
+>
+> `Erlex` is intended for local development tools only and should not be run on untrusted input, as maliciously crafted payloads could crash the BEAM.
 
 While the lion's share of the work is done via invoking `Erlex.pretty_print/1`, other higher order functions exist for further formatting certain messages by running through the Elixir formatter.
 
