@@ -6,7 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ## [Unreleased]
 
-- Nothing pending at time of publication.
+### Fixed
+
+- Support for Erlang/OTP 28 nominal types: parses a named type whose name is a local or remote type, such as `('Elixir.MyApp.User.Nominal':id() :: <<_:288>>)` in a Dialyzer warning.
 
 ## [0.2.9][0.2.8...0.2.9] - 2026-05-14
 
