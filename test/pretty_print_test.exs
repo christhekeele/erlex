@@ -590,4 +590,61 @@ defmodule Erlex.Test.PretyPrintTest do
 
     assert pretty_printed == "(<<114, 111, 108, 101, 115, 95, 117, 115, 101, 114, 115>>)"
   end
+
+  # Dialyzer from Erlang/OTP 28 prints a nominal type as `(Name :: Structure)`,
+  # where `Name` is a local or a remote type.
+  test "nominal remote types are pretty printed appropriately" do
+    input = "'Elixir.MyApp.User.Nominal':id() :: <<_:288>>"
+
+    pretty_printed = Erlex.pretty_print_type(input)
+
+    expected_output = "MyApp.User.Nominal.id() :: <<_::288>>"
+    assert pretty_printed == expected_output
+  end
+
+  test "nominal local types are pretty printed appropriately" do
+    input = "(meter() :: integer())"
+
+    pretty_printed = Erlex.pretty_print(input)
+
+    expected_output = "(meter() :: integer())"
+    assert pretty_printed == expected_output
+  end
+
+  test "nominal types in maps are pretty printed appropriately" do
+    input = ~S"""
+    (#{'__struct__':='Elixir.MyApp.Hub', 'workspace_id':=('Elixir.MyApp.Workspace.Nominal':id() :: <<_:288>>), _=>_})
+    """
+
+    pretty_printed = Erlex.pretty_print_args(input)
+
+    expected_output =
+      "(%MyApp.Hub{:workspace_id => MyApp.Workspace.Nominal.id() :: <<_::288>>, _ => _})"
+
+    assert pretty_printed == expected_output
+  end
+
+  test "nominal types in lists and tuples are pretty printed appropriately" do
+    input = ~S"""
+    (['timer':time() :: non_neg_integer()],{'timer':time() :: non_neg_integer(),atom()})
+    """
+
+    pretty_printed = Erlex.pretty_print_args(input)
+
+    expected_output =
+      "([:timer.time() :: non_neg_integer()], {:timer.time() :: non_neg_integer(), atom()})"
+
+    assert pretty_printed == expected_output
+  end
+
+  test "nominal types in contracts are pretty printed appropriately" do
+    input = ~S"""
+    ('Elixir.MyApp.User.Nominal':id() :: <<_:288>>) -> 'ok'
+    """
+
+    pretty_printed = Erlex.pretty_print_contract(input)
+
+    expected_output = "(MyApp.User.Nominal.id() :: <<_::288>>) :: :ok"
+    assert pretty_printed == expected_output
+  end
 end

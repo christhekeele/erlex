@@ -134,6 +134,7 @@ atom -> atom atom_simple : '$1' ++ '$2'.
 atom -> atom integer : '$1' ++ ['$2'].
 type -> atom ':' type : {type, {atom, '$1'}, '$3'}.
 type -> atom '::' value : {named_type, {atom, '$1'}, '$3'}.
+type -> type '::' value : {named_type, '$1', '$3'}.
 type -> atom list : {type_list, '$1', '$2'}.
 
 binary_items -> binary_part : ['$1'].
